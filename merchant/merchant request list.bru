@@ -1,0 +1,24 @@
+meta {
+  name: merchant request list
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{merchant-api}}/merchants/requests?page=1&size=100
+  body: none
+  auth: bearer
+}
+
+query {
+  page: 1
+  size: 100
+}
+
+headers {
+  x-tenant-id: *:*:*:*
+}
+
+auth:bearer {
+  token: {{token}}
+}

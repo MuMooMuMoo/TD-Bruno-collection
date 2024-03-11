@@ -1,0 +1,15 @@
+meta {
+  name: get all td products
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{product-query}}/tdproducts?queryAll=true
+  body: none
+  auth: none
+}
+
+query {
+  queryAll: true
+}

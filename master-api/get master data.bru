@@ -1,0 +1,28 @@
+meta {
+  name: get master data
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{master-api}}/graphql
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+  x-host: master.api.tdshop.io
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+      "operationName": null,
+      "variables": {},
+      "query": "{\n  segments(articleType: \"N\") {\n code\n nameEn\n families {\n code\n nameEn\n classCodes {\n code\n nameEn\n subClasses {\n code\n nameEn\n }\n }\n }\n }\n }"
+  }
+}

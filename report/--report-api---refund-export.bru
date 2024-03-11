@@ -1,0 +1,15 @@
+meta {
+  name: --report-api---refund-export
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{report-api}}/refund/export
+  body: text
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

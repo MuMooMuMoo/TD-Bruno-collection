@@ -1,0 +1,31 @@
+meta {
+  name: create supplier group request
+  type: http
+  seq: 15
+}
+
+post {
+  url: {{supplier-api}}/supplier-group-requests
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "id": null,
+    "name": "test-import-04112019-4",
+    "articleType": "M",
+    "supplier": null,
+    "type": "N",
+    "groupImportId": "7769625d-d886-4943-9bbc-02c53b82a283",
+    "groupNo": null
+  }
+}

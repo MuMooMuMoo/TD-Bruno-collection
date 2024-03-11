@@ -1,0 +1,27 @@
+meta {
+  name: Approval stock transfer request
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{stock-api}}/stocks/transfer-request/approval
+  body: json
+  auth: bearer
+}
+
+headers {
+  x-host: stock.api.tdshop.io
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+      "id": "604988a2a8262638377d797c",
+      "status": "APPROVED",
+      "comment": "Split transfer orders"
+  }
+}

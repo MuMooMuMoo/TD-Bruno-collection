@@ -1,0 +1,26 @@
+meta {
+  name: get supplier product price
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{purchase-api}}/purchase-product-prices?purchaseType=SUPPLIER&shipToCode=WH002&searchCriteria=น.ส.
+  body: none
+  auth: bearer
+}
+
+query {
+  purchaseType: SUPPLIER
+  shipToCode: WH002
+  searchCriteria: น.ส.
+  ~articleType: M
+}
+
+headers {
+  x-host: purchase.api.tdshop.io
+}
+
+auth:bearer {
+  token: {{token}}
+}

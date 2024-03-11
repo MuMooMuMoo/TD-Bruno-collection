@@ -1,0 +1,15 @@
+meta {
+  name: get article supplier price
+  type: http
+  seq: 14
+}
+
+get {
+  url: {{product-query}}/articleSupplierPrice?articleNo=201039481
+  body: none
+  auth: none
+}
+
+query {
+  articleNo: 201039481
+}

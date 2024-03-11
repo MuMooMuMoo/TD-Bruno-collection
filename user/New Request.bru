@@ -1,0 +1,16 @@
+meta {
+  name: New Request
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{order-query}}/delivery-orders?page=0&size=20
+  body: none
+  auth: none
+}
+
+query {
+  page: 0
+  size: 20
+}

@@ -1,0 +1,35 @@
+meta {
+  name: save supplier group request
+  type: http
+  seq: 16
+}
+
+put {
+  url: {{supplier-api}}/supplier-group-requests
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "id": "5dbff4f4867fa21a146c9b6c",
+    "name": "test-import-04112019-4",
+    "articleType": "M",
+    "supplier": {
+    	"supplierCode" : "100000035",
+    	"supplierName" : "นางสาวนิจจารีย์ สิมมา",
+    	"branchNo" : "00000"
+    },
+    "type": "N",
+    "groupImportId": null,
+    "groupNo": null
+  }
+}

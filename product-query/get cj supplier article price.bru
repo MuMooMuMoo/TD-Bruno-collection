@@ -1,0 +1,26 @@
+meta {
+  name: get cj supplier article price
+  type: http
+  seq: 13
+}
+
+post {
+  url: {{product-query}}/pricing/cj-supplier-prices?orderingCycle=2&productType=INVENTORY&shipToCode=WH001&searchCriteria=20000134
+  body: json
+  auth: bearer
+}
+
+query {
+  orderingCycle: 2
+  productType: INVENTORY
+  shipToCode: WH001
+  searchCriteria: 20000134
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  []
+}

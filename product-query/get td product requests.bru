@@ -1,0 +1,20 @@
+meta {
+  name: get td product requests
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{product-query}}/tdproducts/requests/5c9377740006f606eb742630
+  body: none
+  auth: bearer
+}
+
+headers {
+  Host: product.api.tdshop.io
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{token}}
+}

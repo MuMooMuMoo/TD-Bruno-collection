@@ -1,0 +1,26 @@
+meta {
+  name: add user
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{user-command}}/users
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "email": "test",
+      "userName": "user-1",
+      "firstName": "test",
+      "lastName": "test",
+      "mobileNo": "333333",
+      "roles": ["test"]
+  }
+}

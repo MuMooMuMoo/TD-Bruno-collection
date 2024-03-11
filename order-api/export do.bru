@@ -1,0 +1,21 @@
+meta {
+  name: export do
+  type: http
+  seq: 10
+}
+
+get {
+  url: {{order-api}}/delivery-orders/export-picking?pickDateFrom=01%2F03%2F2020&pickDateTo=31%2F03%2F2020&status%5B%5D=NEW
+  body: none
+  auth: bearer
+}
+
+query {
+  pickDateFrom: 01%2F03%2F2020
+  pickDateTo: 31%2F03%2F2020
+  status%5B%5D: NEW
+}
+
+auth:bearer {
+  token: {{token}}
+}

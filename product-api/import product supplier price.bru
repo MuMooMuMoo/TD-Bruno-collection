@@ -1,0 +1,23 @@
+meta {
+  name: import product supplier price
+  type: http
+  seq: 36
+}
+
+post {
+  url: {{product-api}}/supplier-price-configs/SUPPLIER/import
+  body: multipartForm
+  auth: bearer
+}
+
+headers {
+  x-host: product.api.tdshop.io
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:multipart-form {
+  file: undefined
+}

@@ -1,0 +1,23 @@
+meta {
+  name: get td products for catalog
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{product-query}}/tdproducts/catalog?searchCriteria=ยูนิฟ&offset=0&limit=20
+  body: none
+  auth: bearer
+}
+
+query {
+  searchCriteria: ยูนิฟ
+  offset: 0
+  limit: 20
+  ~catalogLV1: 
+  ~catalogLV2: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

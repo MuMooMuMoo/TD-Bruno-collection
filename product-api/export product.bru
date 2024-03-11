@@ -1,0 +1,19 @@
+meta {
+  name: export product
+  type: http
+  seq: 32
+}
+
+get {
+  url: {{product-api}}/tdproducts/export
+  body: none
+  auth: bearer
+}
+
+headers {
+  x-host: product.api.tdshop.io
+}
+
+auth:bearer {
+  token: {{token}}
+}

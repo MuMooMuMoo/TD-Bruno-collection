@@ -1,0 +1,22 @@
+meta {
+  name: get td pricing for pr supplier type
+  type: http
+  seq: 25
+}
+
+get {
+  url: {{product-api}}/pricing/tdprices?page=0&size=20
+  body: none
+  auth: bearer
+}
+
+query {
+  page: 0
+  size: 20
+  ~searchCriteria: 30001560
+  ~searchCriteria: 2042242
+}
+
+auth:bearer {
+  token: {{token}}
+}

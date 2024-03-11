@@ -1,0 +1,19 @@
+meta {
+  name: get cj pricing for z9
+  type: http
+  seq: 27
+}
+
+get {
+  url: {{product-api}}/pricing/cj-supplier-prices?orderingCycle=2
+  body: none
+  auth: bearer
+}
+
+query {
+  orderingCycle: 2
+}
+
+auth:bearer {
+  token: {{token}}
+}

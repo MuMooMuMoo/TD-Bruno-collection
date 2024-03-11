@@ -1,0 +1,22 @@
+meta {
+  name: Cancel reward request
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{marketing-api}}/reward-requests/cancel
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+      "id": "60488138522d3b2aba7db39f",
+      "comment": "test cancel"
+  }
+}

@@ -1,0 +1,27 @@
+meta {
+  name: approve td product request
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{product-api}}/tdproducts/requests/approve
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+  x-host: product.api.tdshop.io
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+  	"id" : "5f9b9891b3ce620001daebe5",
+  	"comment" : "test approve with new supplier article"
+  }
+}

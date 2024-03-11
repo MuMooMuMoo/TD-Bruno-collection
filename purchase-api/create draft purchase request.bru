@@ -1,0 +1,594 @@
+meta {
+  name: create draft purchase request
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{purchase-api}}/purchase-requests
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "id": null,
+    "type": "Z9",
+    "status": "DRAFT",
+    "orderScheduleDayOfWeek": 4,
+    "requestBuyItems": 46,
+    "requestFreeItems": 0,
+    "createdByName": "admin001 admin001",
+    "createdDate": "2019-08-21T11:03:00.048Z",
+    "totalAmount": 6654.24,
+    "subTotalAmount": 6218.88,
+    "docNo": null,
+    "docDate": null,
+    "vatAmount": 435.36,
+    "version": 0,
+    "orderSchedule": 3,
+    "orderScheduleDayOfWeekDisplay": "Thu",
+    "items": [
+      {
+        "articleNo": "20001665",
+        "barcode": "8858842010044",
+        "productName": "ซีซี เคที่ดอลสปีดไวท์50g#2",
+        "supplierCode": "100101",
+        "supplierName": "บริษัท คาร์มาร์ท จำกัด (มหาชน)",
+        "orderUnit": "ST",
+        "minimumOrder": 204,
+        "vatPct": 7,
+        "unitPrice": 93.46,
+        "vatAmount": 6.54
+      },
+      {
+        "articleNo": "20024130",
+        "barcode": "8809460444179",
+        "productName": "เคที่ดอลล์คลีนอินัฟเมคอัพพีลลิ่งเจล8ml",
+        "supplierCode": "100101",
+        "supplierName": "บริษัท คาร์มาร์ท จำกัด (มหาชน)",
+        "orderUnit": "KAR",
+        "minimumOrder": 1,
+        "vatPct": 7,
+        "unitPrice": 3364.49,
+        "vatAmount": 235.51
+      },
+      {
+        "articleNo": "20000184",
+        "barcode": "18851818033303",
+        "productName": "บิโอเรUVเพอร์เฟคเฟสมิลค์SPF50 30ml",
+        "supplierCode": "100032",
+        "supplierName": "บริษัท คาโอ คอมเมอร์เชียล",
+        "orderUnit": "KAR",
+        "minimumOrder": null,
+        "vatPct": 7,
+        "unitPrice": 2268,
+        "vatAmount": 158.76
+      },
+      {
+        "articleNo": "20000140",
+        "barcode": "18851818907499",
+        "productName": "แอทแทคอีซี่แฮปปี้สวีท450g",
+        "supplierCode": "100032",
+        "supplierName": "บริษัท คาโอ คอมเมอร์เชียล",
+        "orderUnit": "KAR",
+        "minimumOrder": null,
+        "vatPct": 7,
+        "unitPrice": 572.88,
+        "vatAmount": 40.1
+      },
+      {
+        "articleNo": "20006042",
+        "barcode": "18850580200067",
+        "productName": "เบงเบงเวเฟอร์25g P12",
+        "supplierCode": "100121",
+        "supplierName": "บริษัท ซีโน-แปซิฟิค เทรดดิ้ง",
+        "orderUnit": "KAR",
+        "minimumOrder": 60,
+        "vatPct": 7,
+        "unitPrice": 522.29,
+        "vatAmount": 36.56
+      },
+      {
+        "articleNo": "20004021",
+        "barcode": "8858891300301",
+        "productName": "อิชิตันชาเขียวรสจมูกข้าวญีปุ่น420ml40",
+        "supplierCode": "100220",
+        "supplierName": "บริษัท ดีเคเอสเอช (ประเทศไทย) จำกัด",
+        "orderUnit": "KAR",
+        "minimumOrder": 50,
+        "vatPct": 7,
+        "unitPrice": 345.42,
+        "vatAmount": 24.18
+      },
+      {
+        "articleNo": "20003674",
+        "barcode": "38850024108151",
+        "productName": "เอนฟาแล็คนมผงเอพลัส1 3300g",
+        "supplierCode": "100174",
+        "supplierName": "บริษัท ดีเคเอสเอช(ประเทศไทย)",
+        "orderUnit": "KAR",
+        "minimumOrder": 4,
+        "vatPct": 7,
+        "unitPrice": 11727.06,
+        "vatAmount": 820.89
+      },
+      {
+        "articleNo": "20003669",
+        "barcode": "38850024108144",
+        "productName": "เอนฟาแล็คนมผงเอพลัส2 3300g",
+        "supplierCode": "100174",
+        "supplierName": "บริษัท ดีเคเอสเอช(ประเทศไทย)",
+        "orderUnit": "KAR",
+        "minimumOrder": 20,
+        "vatPct": 7,
+        "unitPrice": 9647.65,
+        "vatAmount": 675.34
+      },
+      {
+        "articleNo": "20003678",
+        "barcode": "08850125072305",
+        "productName": "เอส-26โปรเกรสนมผง2400g",
+        "supplierCode": "100175",
+        "supplierName": "บริษัท ดีเคเอสเอช(ประเทศไทย)จำกัด",
+        "orderUnit": "KAR",
+        "minimumOrder": 35,
+        "vatPct": 7,
+        "unitPrice": 2082.88,
+        "vatAmount": 145.8
+      },
+      {
+        "articleNo": "20004307",
+        "barcode": "8851229000232",
+        "productName": "อายิโนะทะกะระผงชูรส500g",
+        "supplierCode": "100352",
+        "supplierName": "บริษัท ทะกะระ (สยาม) จำกัด",
+        "orderUnit": "KAR",
+        "minimumOrder": 32,
+        "vatPct": 7,
+        "unitPrice": 1476.64,
+        "vatAmount": 103.36
+      },
+      {
+        "articleNo": "20006719",
+        "barcode": "18851019011131",
+        "productName": "กูลิโกะป๊อกกี้ช็อกโกแลต47g",
+        "supplierCode": "100678",
+        "supplierName": "บริษัท ธนาวัธน์ อุตสาหกรรม จำกัด",
+        "orderUnit": "KAR",
+        "minimumOrder": 32,
+        "vatPct": 7,
+        "unitPrice": 1647.25,
+        "vatAmount": 115.31
+      },
+      {
+        "articleNo": "20000831",
+        "barcode": "28851989011688",
+        "productName": "เอเวอร์เซ้นสเย็นสุดขั้วฟ้า280g P2",
+        "supplierCode": "100045",
+        "supplierName": "บริษัท นีโอ คอร์ปอเรท จำกัด",
+        "orderUnit": "KAR",
+        "minimumOrder": 25,
+        "vatPct": 7,
+        "unitPrice": 838.84,
+        "vatAmount": 58.72
+      },
+      {
+        "articleNo": "20000826",
+        "barcode": "28851989011442",
+        "productName": "เอเวอร์เซ้นส์แป้งเย็นสีชมพู",
+        "supplierCode": "100045",
+        "supplierName": "บริษัท นีโอ คอร์ปอเรท จำกัด",
+        "orderUnit": "KAR",
+        "minimumOrder": 30,
+        "vatPct": 7,
+        "unitPrice": 745.64,
+        "vatAmount": 52.19
+      },
+      {
+        "articleNo": "20000014006",
+        "barcode": "38850188250208",
+        "productName": "โฟร์โมสต์225ml, หวาน ...เข้มข้น",
+        "supplierCode": "100020",
+        "supplierName": "บริษัท ฟรีสแลนด์คัมพิน่า",
+        "orderUnit": "KAR",
+        "minimumOrder": 88,
+        "vatPct": 0,
+        "unitPrice": 366.3,
+        "vatAmount": 0
+      },
+      {
+        "articleNo": "20024436",
+        "barcode": "8850999006932",
+        "productName": "สิงห์เบียร์ 620ml P3",
+        "supplierCode": "100190",
+        "supplierName": "บริษัท มิตรราชบุรีเทรดดิ้ง จำกัด",
+        "orderUnit": "KAR",
+        "minimumOrder": 60,
+        "vatPct": 7,
+        "unitPrice": 621.9,
+        "vatAmount": 43.53
+      },
+      {
+        "articleNo": "20000062002",
+        "barcode": "28851111412369",
+        "productName": "มามี่โพโคแพ้นท์แพ็คคู่, ช, M5 edit cat lv.",
+        "supplierCode": "100655",
+        "supplierName": "บริษัท ยูนิ-ชาร์ม",
+        "orderUnit": "KAR",
+        "minimumOrder": null,
+        "vatPct": 7,
+        "unitPrice": 910.43,
+        "vatAmount": 63.73
+      },
+      {
+        "articleNo": "20000656",
+        "barcode": "18851932382011",
+        "productName": "บรีสเอกเซลลิควิดถุง750ml",
+        "supplierCode": "100016",
+        "supplierName": "บริษัท ยูนิลีเวอร์ ไทย เทรดดิ้ง",
+        "orderUnit": "KAR",
+        "minimumOrder": 12,
+        "vatPct": 7,
+        "unitPrice": 766,
+        "vatAmount": 53.62
+      },
+      {
+        "articleNo": "20025057",
+        "barcode": "18850002027128",
+        "productName": "EDIT PRODUCT FOR QA",
+        "supplierCode": "100184",
+        "supplierName": "บริษัท สหพัฒนพิบูล จำกัด (มหาชน)",
+        "orderUnit": "KAR",
+        "minimumOrder": 1,
+        "vatPct": 0,
+        "unitPrice": 550,
+        "vatAmount": 0
+      },
+      {
+        "articleNo": "20025029",
+        "barcode": "18850002032917",
+        "productName": "ซอลล์ยาสีฟันตรีผลา 160 กรัม",
+        "supplierCode": "100184",
+        "supplierName": "บริษัท สหพัฒนพิบูล จำกัด (มหาชน)",
+        "orderUnit": "KAR",
+        "minimumOrder": 1,
+        "vatPct": 7,
+        "unitPrice": 2200,
+        "vatAmount": 154
+      },
+      {
+        "articleNo": "20025028",
+        "barcode": "18850002032825",
+        "productName": "ซิสเท็มมา ยาสีฟันแอดวานซ์กัมโพรเทค 160 G",
+        "supplierCode": "100184",
+        "supplierName": "บริษัท สหพัฒนพิบูล จำกัด (มหาชน)",
+        "orderUnit": "KAR",
+        "minimumOrder": 1,
+        "vatPct": 7,
+        "unitPrice": 2422,
+        "vatAmount": 169.54
+      },
+      {
+        "articleNo": "20005780",
+        "barcode": "08850002020146",
+        "productName": "ซิสเท็มมาแปรงนุ่มมาตรฐาน P3",
+        "supplierCode": "100184",
+        "supplierName": "บริษัท สหพัฒนพิบูล จำกัด (มหาชน)",
+        "orderUnit": "KAR",
+        "minimumOrder": 36,
+        "vatPct": 7,
+        "unitPrice": 2750,
+        "vatAmount": 192.5
+      },
+      {
+        "articleNo": "20006257",
+        "barcode": "8850987701177",
+        "productName": "มาม่าข้าวต้มรสกุ้ง",
+        "supplierCode": "100185",
+        "supplierName": "บริษัท สหพัฒนพิบูล จำกัด (มหาชน)",
+        "orderUnit": "KAR",
+        "minimumOrder": 16,
+        "vatPct": 7,
+        "unitPrice": 705,
+        "vatAmount": 49.35
+      },
+      {
+        "articleNo": "20006256",
+        "barcode": "8850987701160",
+        "productName": "มาม่าข้าวต้มรสหมู",
+        "supplierCode": "100185",
+        "supplierName": "บริษัท สหพัฒนพิบูล จำกัด (มหาชน)",
+        "orderUnit": "KAR",
+        "minimumOrder": 24,
+        "vatPct": 7,
+        "unitPrice": 705,
+        "vatAmount": 49.35
+      },
+      {
+        "articleNo": "20006261",
+        "barcode": "8850987128806",
+        "productName": "มาม่าคัพต้มยำกุ้งน้ำข้นถ้วย",
+        "supplierCode": "100185",
+        "supplierName": "บริษัท สหพัฒนพิบูล จำกัด (มหาชน)",
+        "orderUnit": "KAR",
+        "minimumOrder": 15,
+        "vatPct": 7,
+        "unitPrice": 720,
+        "vatAmount": 50.4
+      },
+      {
+        "articleNo": "20006260",
+        "barcode": "8851876104086",
+        "productName": "มาม่าคัพโจ๊กรสไก่",
+        "supplierCode": "100185",
+        "supplierName": "บริษัท สหพัฒนพิบูล จำกัด (มหาชน)",
+        "orderUnit": "KAR",
+        "minimumOrder": 24,
+        "vatPct": 7,
+        "unitPrice": 427,
+        "vatAmount": 29.89
+      },
+      {
+        "articleNo": "20006248",
+        "barcode": "28850987101292",
+        "productName": "มาม่าต้มยำกุ้ง",
+        "supplierCode": "100185",
+        "supplierName": "บริษัท สหพัฒนพิบูล จำกัด (มหาชน)",
+        "orderUnit": "KAR",
+        "minimumOrder": 20,
+        "vatPct": 7,
+        "unitPrice": 815,
+        "vatAmount": 57.05
+      },
+      {
+        "articleNo": "20007413",
+        "barcode": "08850002009011",
+        "productName": "แซคท์ยาสีฟันแดง160g",
+        "supplierCode": "100184",
+        "supplierName": "บริษัท สหพัฒนพิบูล จำกัด (มหาชน)",
+        "orderUnit": "KAR",
+        "minimumOrder": 24,
+        "vatPct": 7,
+        "unitPrice": 1510,
+        "vatAmount": 105.7
+      },
+      {
+        "articleNo": "20020854",
+        "barcode": "8858850050278",
+        "productName": "ซื่อสัตย์แมคคาเรลซอลมะเขือเทศฝาดึง155g",
+        "supplierCode": "100691",
+        "supplierName": "บริษัท สหพัฒนพิบูล จำกัด(มหาชน)",
+        "orderUnit": "KAR",
+        "minimumOrder": 36,
+        "vatPct": 7,
+        "unitPrice": 1017,
+        "vatAmount": 71.19
+      },
+      {
+        "articleNo": "20025126",
+        "barcode": "88502500112620",
+        "productName": "อายิโนะโมะโต๊ะผงชูรส 500g",
+        "supplierCode": "100060",
+        "supplierName": "บริษัท อายิโนะโมะโต๊ะเซลส์",
+        "orderUnit": "KAR",
+        "minimumOrder": 50,
+        "vatPct": 7,
+        "unitPrice": 1727.77,
+        "vatAmount": 120.94
+      },
+      {
+        "articleNo": "20004273",
+        "barcode": "18850250007347",
+        "productName": "อายิโนะโมะโต๊ะผงชูรส250g",
+        "supplierCode": "100060",
+        "supplierName": "บริษัท อายิโนะโมะโต๊ะเซลส์",
+        "orderUnit": "KAR",
+        "minimumOrder": null,
+        "vatPct": 0,
+        "unitPrice": 1727.77,
+        "vatAmount": 0
+      },
+      {
+        "articleNo": "20004292",
+        "barcode": "38850250001660",
+        "productName": "อายิโนะโมะโต๊ะผงชูรส80g",
+        "supplierCode": "100060",
+        "supplierName": "บริษัท อายิโนะโมะโต๊ะเซลส์",
+        "orderUnit": "KAR",
+        "minimumOrder": 40,
+        "vatPct": 7,
+        "unitPrice": 1594.96,
+        "vatAmount": 111.65
+      },
+      {
+        "articleNo": "20006579",
+        "barcode": "8850228010082",
+        "productName": "สปอนเซอร์ออริจินัล250ml",
+        "supplierCode": "100444",
+        "supplierName": "บริษัท เดอเบล จำกัด",
+        "orderUnit": "KAR",
+        "minimumOrder": 96,
+        "vatPct": 7,
+        "unitPrice": 185.13,
+        "vatAmount": 12.96
+      },
+      {
+        "articleNo": "20013309",
+        "barcode": "8850228012901",
+        "productName": "เพียวริคุลิ้นจี่350ml FOR DEMO",
+        "supplierCode": "100444",
+        "supplierName": "บริษัท เดอเบล จำกัด",
+        "orderUnit": "KAR",
+        "minimumOrder": 60,
+        "vatPct": 7,
+        "unitPrice": 203.04,
+        "vatAmount": 14.21
+      },
+      {
+        "articleNo": "20003936",
+        "barcode": "8850228011140",
+        "productName": "เรดดี้โกจิเบอรี่150ml",
+        "supplierCode": "100444",
+        "supplierName": "บริษัท เดอเบล จำกัด",
+        "orderUnit": "KAR",
+        "minimumOrder": 132,
+        "vatPct": 7,
+        "unitPrice": 543,
+        "vatAmount": 38.01
+      },
+      {
+        "articleNo": "20005839",
+        "barcode": "18850046222305",
+        "productName": "ซิลค์เมโลน่ากล่อง120แผ่น",
+        "supplierCode": "100044",
+        "supplierName": "บริษัท เบอร์ลี่ยุคเกอร์ จำกัด",
+        "orderUnit": "KAR",
+        "minimumOrder": 12,
+        "vatPct": 7,
+        "unitPrice": 825.21,
+        "vatAmount": 57.76
+      },
+      {
+        "articleNo": "20020068",
+        "barcode": "18851004101267",
+        "productName": "ปาร์ตี้บานาน่าช็อกโก67g",
+        "supplierCode": "100189",
+        "supplierName": "บริษัท เบอร์ลี่ยุคเกอร์ จำกัด",
+        "orderUnit": "KAR",
+        "minimumOrder": null,
+        "vatPct": 7,
+        "unitPrice": 357.79,
+        "vatAmount": 25.05
+      },
+      {
+        "articleNo": "20004661",
+        "barcode": "8851004203490",
+        "productName": "แคมปัสช็อคโกแลต36g",
+        "supplierCode": "100189",
+        "supplierName": "บริษัท เบอร์ลี่ยุคเกอร์ จำกัด",
+        "orderUnit": "KAR",
+        "minimumOrder": 35,
+        "vatPct": 7,
+        "unitPrice": 358.1,
+        "vatAmount": 25.07
+      },
+      {
+        "articleNo": "20005959",
+        "barcode": "28851688770046",
+        "productName": "ช้างยาจุดขดจัมโบ้กล่อง",
+        "supplierCode": "101014",
+        "supplierName": "บริษัท เวลล์-ไลน์ เวย์ส จำกัด",
+        "orderUnit": "KAR",
+        "minimumOrder": 28,
+        "vatPct": 7,
+        "unitPrice": 807.48,
+        "vatAmount": 56.52
+      },
+      {
+        "articleNo": "20007496",
+        "barcode": "18850175052118",
+        "productName": "EDIT PRODUCT FOR QA",
+        "supplierCode": "100074",
+        "supplierName": "บริษัท เอส.ซี.ยอห์นสัน แอนด์ซัน",
+        "orderUnit": "KAR",
+        "minimumOrder": 15,
+        "vatPct": 0,
+        "unitPrice": 1086,
+        "vatAmount": 0
+      },
+      {
+        "articleNo": "20007625",
+        "barcode": "8850329120116",
+        "productName": "เมจินมสดจืด200ml",
+        "supplierCode": "100162",
+        "supplierName": "บริษัท เอแอนด์ อาร์มิลค์ จำกัด",
+        "orderUnit": "ST",
+        "minimumOrder": 49,
+        "vatPct": 7,
+        "unitPrice": 10.62,
+        "vatAmount": 0.74
+      },
+      {
+        "articleNo": "20023493",
+        "barcode": "8857123059239",
+        "productName": "ขนมไข่",
+        "supplierCode": "101034",
+        "supplierName": "บริษัท แกรนด์ อินเตอร์ ฟูดส์ จำกัด",
+        "orderUnit": "ST",
+        "minimumOrder": 8,
+        "vatPct": 7,
+        "unitPrice": 22.9,
+        "vatAmount": 1.6
+      },
+      {
+        "articleNo": "20003233",
+        "barcode": "58850412372519",
+        "productName": "ข้าวเกรียบรสมะเขือเทศ15g P12",
+        "supplierCode": "100139",
+        "supplierName": "บริษัท แฟชั่นฟู้ด จำกัด",
+        "orderUnit": "KAR",
+        "minimumOrder": 6,
+        "vatPct": 7,
+        "unitPrice": 508.84,
+        "vatAmount": 35.62
+      },
+      {
+        "articleNo": "20016223",
+        "barcode": "8851994916059",
+        "productName": "อาชาเบียร์630ml",
+        "supplierCode": "100449",
+        "supplierName": "บริษัท โมเดิร์นเทรด แมนเนจเม้นท์",
+        "orderUnit": "KAR",
+        "minimumOrder": 400,
+        "vatPct": 7,
+        "unitPrice": 483.18,
+        "vatAmount": 33.82
+      },
+      {
+        "articleNo": "20007559",
+        "barcode": "18850620888774",
+        "productName": "น้ำปลาตราปลาหมึก700ซีซีขวดเพท(เหลือง)",
+        "supplierCode": "100681",
+        "supplierName": "บริษัท โรงงานน้ำปลาไทย",
+        "orderUnit": "KAR",
+        "minimumOrder": 10,
+        "vatPct": 7,
+        "unitPrice": 206.61,
+        "vatAmount": 14.46
+      },
+      {
+        "articleNo": "20000071006",
+        "barcode": "88855140007246",
+        "productName": "เมจิคคัลเลอร์บลอนด์อ่อน-เทาหม่นG-24/1",
+        "supplierCode": "100282",
+        "supplierName": "บริษัท ไบโอ-วูเมนส์ จำกัด",
+        "orderUnit": "KAR",
+        "minimumOrder": null,
+        "vatPct": 7,
+        "unitPrice": 777.36,
+        "vatAmount": 54.42
+      },
+      {
+        "articleNo": "20000071007",
+        "barcode": "88855140007185",
+        "productName": "เมจิคคัลเลอร์บลอนด์อ่อน-เหลืองทองG-18/1",
+        "supplierCode": "100282",
+        "supplierName": "บริษัท ไบโอ-วูเมนส์ จำกัด",
+        "orderUnit": "KAR",
+        "minimumOrder": null,
+        "vatPct": 7,
+        "unitPrice": 777.36,
+        "vatAmount": 54.42
+      }
+    ]
+  }
+}

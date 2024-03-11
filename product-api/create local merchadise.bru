@@ -1,0 +1,32 @@
+meta {
+  name: create local merchadise
+  type: http
+  seq: 19
+}
+
+post {
+  url: {{product-api}}/localmerchandises
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+  	"articleNo" : "testcreate",
+  	"productName" : "arai dee",
+  	"retailPrice" : 10,
+  	"unit" : "PC",
+  	"supplierName" : "TookDee",
+  	"brand" : "TookDee",
+  	"barcode" : "1234567878990",
+  	"vat" : true
+  }
+}

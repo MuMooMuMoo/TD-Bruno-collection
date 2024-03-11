@@ -1,0 +1,22 @@
+meta {
+  name: export delivery order picking
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{warehouse-api}}/delivery-orders/export-picking?requestedDeliveryDateFrom=01/07/2019&requestedDeliveryDateTo=31/07/2019
+  body: none
+  auth: bearer
+}
+
+query {
+  requestedDeliveryDateFrom: 01/07/2019
+  requestedDeliveryDateTo: 31/07/2019
+  ~status[]: PICKING
+  ~status[]: DELIVERED
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,26 @@
+meta {
+  name: create shipment
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{order-command}}/shipments
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+  	"courierCode": "1",
+  	"courierName": "1",
+  	"shipCharge": 0.0,
+  	"plateNo": "1",
+  	"driverName": "1",
+  	"deliveryDate": "2020-05-21",
+  	"pickupDate": "2020-05-21",
+  	"deliveryOrders": [
+  		"DO20-TH000082-0003"
+  	]
+  }
+}

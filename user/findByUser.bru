@@ -1,0 +1,20 @@
+meta {
+  name: findByUser
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{user-query}}/users/sun.wu
+  body: json
+  auth: bearer
+}
+
+headers {
+  Host: identity.api.tdshop.io
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,17 @@
+meta {
+  name: get td supplier promotion by criteria
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{product-query}}/tdsupplier/promotions?supplierCode=250000010&shipToCode=WH001&searchCriteria=INV
+  body: none
+  auth: none
+}
+
+query {
+  supplierCode: 250000010
+  shipToCode: WH001
+  searchCriteria: INV
+}

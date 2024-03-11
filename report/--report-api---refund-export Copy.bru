@@ -1,0 +1,15 @@
+meta {
+  name: --report-api---refund-export Copy
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{report-api}}/coupon-setting/export
+  body: text
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,15 @@
+meta {
+  name: --membership-api---membership-members-619490aeb512135437cc3c52
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{membership-api}}/membership/members/619490aeb512135437cc3c52
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

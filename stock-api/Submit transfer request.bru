@@ -1,0 +1,64 @@
+meta {
+  name: Submit transfer request
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{stock-api}}/stocks/transfer-request/submit
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "id": "6045d8dff8403c62f7c2dfe5",
+    "version": 6,
+    "docNo": null,
+    "deliveryDate": "2021-03-17T09:42:38",
+    "deliveryNote": null,
+    "items": [
+      {
+        "itemNo": 1,
+        "articleNo": "12100201",
+        "barcode": "8855051022509",
+        "productName": "AROฝาน้ำเจาะรู_updat change version 1.0.0.0.1.02",
+        "unit": "PC",
+        "unitFactor": 1,
+        "productType": "INVENTORY",
+        "quantity": 0
+      },
+      {
+        "itemNo": 2,
+        "articleNo": "12100590",
+        "barcode": "8855051018601",
+        "productName": "AROแก้วใส16oz",
+        "unit": "PC",
+        "unitFactor": 1,
+        "productType": "INVENTORY",
+        "quantity": 1
+      }
+    ],
+    "shipFromCode": "WH002",
+    "shipFromName": null,
+    "shipFromCodeName": "TDCE-01-คลังวังน้อย",
+    "shipToCode": "WH001",
+    "shipToName": null,
+    "shipToCodeName": "TDNE-01-คลังขอนแก่น",
+    "status": "DRAFT",
+    "requester": "000000",
+    "requesterName": "Admin Td",
+    "requestedDate": "2021-03-10T09:59:05.478",
+    "createdDate": "2021-03-08T07:57:19.031",
+    "createdBy": "000409",
+    "createdByName": "Kanyarat Pakdeenit",
+    "lastModifiedBy": "000000",
+    "lastModifiedByName": "Admin Td",
+    "lastModifiedDate": "2021-03-10T09:59:05.478",
+    "auditLogs": []
+  }
+}

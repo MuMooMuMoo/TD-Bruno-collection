@@ -1,0 +1,15 @@
+meta {
+  name: get class price setting by criteria
+  type: http
+  seq: 16
+}
+
+get {
+  url: {{product-api}}/price-settings/classes
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

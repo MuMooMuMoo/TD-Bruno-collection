@@ -1,0 +1,27 @@
+meta {
+  name: approve supplier group request
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{supplier-api}}/supplier-group-requests/approve
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+  x-host: supplier.api.tdshop.io
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+  	"id" : "5dc12b399fea422353df0ece",
+  	"comment" : "test approve"
+  }
+}

@@ -1,0 +1,34 @@
+meta {
+  name: submit edit shipment
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{warehouse-api}}/shipments
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+      "id": "5d3803918dc4761a49630e01",
+      "version": 1,
+      "shipmentNo": "SM19-000002",
+      "courierCode": "test",
+      "courierName": "test",
+      "shipCharge": 200.00,
+      "plateNo": "ก-999 กทม",
+      "driverName": "Jame1 Jaupdate",
+      "deliveryDate": "2019-08-10",
+      "pickupDate": "2019-08-03"
+  }
+}

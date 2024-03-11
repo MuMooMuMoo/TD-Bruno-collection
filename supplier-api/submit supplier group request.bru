@@ -1,0 +1,33 @@
+meta {
+  name: submit supplier group request
+  type: http
+  seq: 14
+}
+
+post {
+  url: {{supplier-api}}/supplier-group-requests/submit
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+  x-host: supplier.api.tdshop.io
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "id": null,
+    "name": "QA-NOT-LINK-SUP-GROUP-INV-02",
+    "productType": "INVENTORY",
+    "supplier": null,
+    "type": "E",
+    "groupImportId": null,
+    "groupNo": "000030",
+    "version": null
+  }
+}

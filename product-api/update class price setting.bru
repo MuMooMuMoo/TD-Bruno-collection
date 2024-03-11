@@ -1,0 +1,32 @@
+meta {
+  name: update class price setting
+  type: http
+  seq: 17
+}
+
+post {
+  url: {{product-api}}/price-settings/classes
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+      "id": "60100",
+      "version": null,
+      "classCode": "60100",
+      "className": null,
+      "classMarkup": 10,
+      "editDate": null,
+      "editBy": null,
+      "historySettings": null
+  }
+}

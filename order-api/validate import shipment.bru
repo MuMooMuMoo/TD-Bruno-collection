@@ -1,0 +1,20 @@
+meta {
+  name: validate import shipment
+  type: http
+  seq: 17
+}
+
+post {
+  url: {{order-api}}/shipments/import/validates
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:multipart-form {
+  file: undefined
+  ~file: 
+}

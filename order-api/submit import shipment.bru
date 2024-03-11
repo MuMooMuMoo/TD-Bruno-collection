@@ -1,0 +1,42 @@
+meta {
+  name: submit import shipment
+  type: http
+  seq: 18
+}
+
+post {
+  url: {{order-api}}/shipments/import/submits
+  body: json
+  auth: none
+}
+
+body:json {
+  [
+      {
+          "groupNo": 1,
+          "courierCode": "250000001",
+          "courierName": " บริษัทอีซี่โฮม บาย ดับบลิวแอลดี อินเตอร์มาร์เก็ตติ้ง แอนด์ เซอร์วิสเซส จำกัด",
+          "shipCharge": 10,
+          "plateNo": "",
+          "driverName": "",
+          "deliveryDate": "2021-05-28",
+          "pickupDate": "2021-05-28",
+          "deliveryOrders": [
+              "DO20-TH000001-0008"
+          ]
+      },
+      {
+          "groupNo": 2,
+          "courierCode": "250000001",
+          "courierName": " บริษัทอีซี่โฮม บาย ดับบลิวแอลดี อินเตอร์มาร์เก็ตติ้ง แอนด์ เซอร์วิสเซส จำกัด",
+          "shipCharge": 10,
+          "plateNo": "",
+          "driverName": "",
+          "deliveryDate": "2021-05-28",
+          "pickupDate": "2021-05-28",
+          "deliveryOrders": [
+              "DO20-TH000015-0003"
+          ]
+      }
+  ]
+}

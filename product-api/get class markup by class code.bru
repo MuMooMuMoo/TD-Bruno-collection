@@ -1,0 +1,15 @@
+meta {
+  name: get class markup by class code
+  type: http
+  seq: 18
+}
+
+get {
+  url: {{product-api}}/price-settings/classes/60100
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

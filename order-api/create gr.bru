@@ -1,0 +1,78 @@
+meta {
+  name: create gr
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{order-api}}/grs
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+     "amount": {
+       "amount": 838.0,
+       "currency": "THB"
+     },
+     "claimAmount": {
+       "amount": 0.0,
+       "currency": "THB"
+     },
+     "doNo": "DO19-KKN0002-000074",
+     "items": [
+       {
+         "itemNo": 1,	
+         "amount": {
+           "amount": 620.0,
+           "currency": "THB"
+         },
+         "articleNo": "20021705",
+         "barcode": "8850006927571",
+         "claimAmount": {
+           "amount": 0.0,
+           "currency": "THB"
+         },
+         "claimQty": 0,
+         "productName": "คอลเกตซอล์ท150กรัมซอล์ทดับเบิ้ลคลีนแพค",
+         "qty": 1,
+         "receiveAmount": {
+           "amount": 3720.0,
+           "currency": "THB"
+         },
+         "receiveQty": 6,
+         "unit": "PAC",
+         "unitFactor": 6,
+         "unitPrice": {
+           "amount": 620.0,
+           "currency": "THB"
+         }
+       }
+     ],
+     "poNumber": "SO19-KKN0002-0082",
+     "returnItems": [
+       {
+         "name": "ตะกร้าสินค้าขนาดเล็ก",
+         "qty": 0
+       },
+       {
+         "name": "ตะกร้าสินค้าขนาดกลาง",
+         "qty": 0
+       },
+       {
+         "name": "ตะกร้าสินค้าขนาดใหญ่",
+         "qty": 0
+       }
+     ],
+     "signImage": "/identity_user_files/store.mo/signature_2019-08-02T11:24:41.533.png"
+   }
+}

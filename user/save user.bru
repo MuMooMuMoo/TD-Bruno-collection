@@ -1,0 +1,36 @@
+meta {
+  name: save user
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{user-api}}/users
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "_id": "1",
+      "version": 0,
+      "email": "user-1@tdx.co",
+      "name": "user-1",
+      "roles": [
+          {
+              "_id": "1",
+              "name": "ADMIN",
+              "permissions": [
+                  {
+                      "_id": "1",
+                      "name": "*"
+                  }
+              ]
+          }
+      ]
+  }
+}

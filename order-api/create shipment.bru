@@ -1,0 +1,30 @@
+meta {
+  name: create shipment
+  type: http
+  seq: 12
+}
+
+post {
+  url: {{order-api}}/shipments
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "courierCode": "220000001",
+    "courierName": "Qingdao Wintec System Co.,Ltd",
+    "shipCharge": 100,
+    "plateNo": "กข-9999",
+    "driverName": "คนขับรถ",
+    "deliveryDate": "2020-04-30T00:00:00",
+    "pickupDate": "2020-04-30T00:00:00",
+    "deliveryOrders": [
+      "DO20-OMGStoreC-0014"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+meta {
+  name: get td products for assortment
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{product-query}}/tdproducts/assortment?searchCriteria=8851932353885
+  body: none
+  auth: bearer
+}
+
+query {
+  searchCriteria: 8851932353885
+}
+
+auth:bearer {
+  token: {{token}}
+}

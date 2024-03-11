@@ -1,0 +1,15 @@
+meta {
+  name: check duplicate product article no
+  type: http
+  seq: 22
+}
+
+get {
+  url: {{product-api}}/tdproducts/exists/9999999999
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

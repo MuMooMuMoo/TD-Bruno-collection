@@ -1,0 +1,238 @@
+meta {
+  name: create td product request
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{product-api}}/tdproducts/requests
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+      "id": "5dcce3f5b2bee24fddb30090",
+      "version": 0,
+      "requestNo": null,
+      "articleNo": "20000001001",
+      "productName": "ดีแคชอินครีมบลอนด์เข้มทอง(GE888/7)100ml",
+      "type": "NEW",
+      "requestedBy": "5d89b8fe6e21064964611c8f",
+      "requestedByName": "admin001 td",
+      "requestedDate": "2019-11-14T12:19:49.633",
+      "useCJProduct": true,
+      "articleType": "M",
+      "status": "DRAFT",
+      "productDetail": {
+          "tdProduct": {
+              "id": "20000001001",
+              "version": 4,
+              "createdDate": "2019-09-30T11:16:40.074",
+              "createdBy": "SchedulerJob",
+              "lastModifiedDate": "2019-11-14T12:19:49.578",
+              "lastModifiedBy": "000000",
+              "articleNo": "20000001001",
+              "useCJProduct": true,
+              "productName": "ดีแคชอินครีมบลอนด์เข้มทอง(GE888/7)100ml",
+              "productDisplayName": "ดีแคชอินครีมบลอนด์เข้มทอง(GE888/7)100ml",
+              "brand": "test",
+              "productStatus": null,
+              "standardGp": 1.0,
+              "productTier": "test",
+              "productStandard": "test",
+              "cbgProduct": "test",
+              "exclusiveProduct": false,
+              "productGrading": "AA",
+              "productRecommend": true,
+              "productImages": [],
+              "shelfLife": 912,
+              "minimumShelfLife": 652,
+              "restrictedItem": false,
+              "restrictedAlcoholSaleTime": false,
+              "vat": true,
+              "estSalesQty": null,
+              "estSalesValue": null,
+              "sellingChannel": null,
+              "segment": "SEG00002",
+              "family": "A0000",
+              "classCode": "A0400",
+              "subClass": "A0401",
+              "catalogLV1": "CAT100001",
+              "catalogLV2": "CAT200001",
+              "size": null,
+              "uom": null,
+              "flavor": null,
+              "gradingGroup": null,
+              "productLocationGuideline": "test",
+              "articleType": "M",
+              "allowToRent": false,
+              "rentalPerMonth": null,
+              "orderingMethod": "FIRST_LOT_ORDER",
+              "freshLifeCategory": {
+                  "freshLifeCategoryId": null,
+                  "freshLifeCategoryCode": null,
+                  "freshLifeCategoryName": null
+              },
+              "deliveryMethod": "TD",
+              "supplierGroup": {
+                  "supplierGroupId": null,
+                  "supplierGroupNo": null,
+                  "supplierGroupName": null
+              },
+              "barcodes": [],
+              "allowToEdit": null
+          },
+          "cjProduct": {
+              "id": "20000001001",
+              "version": 4,
+              "createdDate": "2019-09-30T11:16:40.074",
+              "createdBy": "SchedulerJob",
+              "lastModifiedDate": "2019-11-14T12:19:49.578",
+              "lastModifiedBy": "000000",
+              "articleNo": "20000001001",
+              "productName": "ดีแคชอินครีมบลอนด์เข้มทอง(GE888/7)100ml",
+              "statusCJ": "C",
+              "supplierCode": "101135",
+              "supplierName": "บริษัท ซี.พี.คอนซูเมอร์โพรดักส์ จำก",
+              "brand": "",
+              "pickingUnit": "ST",
+              "shelfLife": 912,
+              "minimumShelfLife": 652,
+              "restrictedItem": false,
+              "vat": true,
+              "segmentCode": "SEG00002",
+              "segmentName": "Grocery Non-Food",
+              "familyCode": "A0000",
+              "familyName": "Hair Care",
+              "classCode": "A0400",
+              "className": "Hair Coloring",
+              "subClassCode": "A0401",
+              "subClassName": "Permanent",
+              "type": null,
+              "selectStatus": "SELECTED",
+              "barcodes": null
+          },
+          "supplierPrices": [],
+          "maximumNormalPrice": 10,
+          "maximumSpecialPrice": 8,
+          "normalPrice": null,
+          "specialPrice": null,
+          "effectiveWholesalePrice": null,
+          "scheduleWholesalePrice": null,
+          "barcodes": [
+              {
+                  "cjBarcode": {
+                      "id": "8851144321832",
+                      "version": 1,
+                      "barcode": "8851144321832",
+                      "articleNo": "20000001001",
+                      "barSize": "S",
+                      "unit": "ST",
+                      "unitFactor": 1,
+                      "retailPrice": 109.0,
+                      "movingPrice": 66.23,
+                      "wholesalePrice": 66.23,
+                      "retailPriceEffectiveDate": null,
+                      "pickingUnit": null,
+                      "allowToOrder": null,
+                      "allowToBuy": null,
+                      "allowToSell": null
+                  },
+                  "tdBarcode": {
+                      "id": "8851144321832",
+                      "version": 1,
+                      "createdDate": "2019-09-30T11:19:46.478",
+                      "createdBy": "SchedulerJob",
+                      "lastModifiedDate": "2019-09-30T11:58:58.169",
+                      "lastModifiedBy": "SchedulerJob",
+                      "articleNo": "20000001001",
+                      "barcode": "8851144321832",
+                      "barcodeStatus": "INACTIVE",
+                      "barSize": "S",
+                      "unit": "PC",
+                      "unitFactor": 1,
+                      "weight": null,
+                      "height": null,
+                      "width": null,
+                      "length": null,
+                      "suggestedRetailPrice": null,
+                      "retailPrice": {
+                          "id": null,
+                          "articleNo": null,
+                          "barcode": null,
+                          "priceIncVat": 109,
+                          "vat": 7.13,
+                          "priceExcVat": 101.87,
+                          "effectiveDate": null
+                      },
+                      "scheduleRetailPrice": null,
+                      "estimatedPartnerGpPct": null
+                  },
+                  "changeBarcodes": null
+              },
+              {
+                  "cjBarcode": {
+                      "id": "18851144321839",
+                      "version": 1,
+                      "barcode": "18851144321839",
+                      "articleNo": "20000001001",
+                      "barSize": "L",
+                      "unit": "KAR",
+                      "unitFactor": 12,
+                      "retailPrice": 0.0,
+                      "movingPrice": 794.76,
+                      "wholesalePrice": 794.76,
+                      "retailPriceEffectiveDate": null,
+                      "pickingUnit": null,
+                      "allowToOrder": null,
+                      "allowToBuy": null,
+                      "allowToSell": null
+                  },
+                  "tdBarcode": {
+                      "id": "18851144321839",
+                      "version": 1,
+                      "createdDate": "2019-09-30T11:19:46.483",
+                      "createdBy": "SchedulerJob",
+                      "lastModifiedDate": "2019-09-30T11:58:58.173",
+                      "lastModifiedBy": "SchedulerJob",
+                      "articleNo": "20000001001",
+                      "barcode": "18851144321839",
+                      "barcodeStatus": "INACTIVE",
+                      "barSize": "L",
+                      "unit": "CAR",
+                      "unitFactor": 12,
+                      "weight": null,
+                      "height": null,
+                      "width": null,
+                      "length": null,
+                      "suggestedRetailPrice": null,
+                      "retailPrice": {
+                          "id": null,
+                          "articleNo": null,
+                          "barcode": null,
+                          "priceIncVat": 0,
+                          "vat": 0.0,
+                          "priceExcVat": 0.0,
+                          "effectiveDate": null
+                      },
+                      "scheduleRetailPrice": null,
+                      "estimatedPartnerGpPct": null
+                  },
+                  "changeBarcodes": null
+              }
+          ],
+          "changeProducts": null
+      },
+      "allowToCopy": false,
+      "auditLogs": []
+  }
+}

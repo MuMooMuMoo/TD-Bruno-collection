@@ -1,0 +1,15 @@
+meta {
+  name: public key
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{identity-authen}}/oauth/.well-known/jwt.pem
+  body: none
+  auth: none
+}
+
+headers {
+  Host: identity.api.tdshop.io
+}

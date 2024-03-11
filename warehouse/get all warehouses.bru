@@ -1,0 +1,19 @@
+meta {
+  name: get all warehouses
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{warehouse-api}}/warehouses
+  body: none
+  auth: bearer
+}
+
+headers {
+  x-host: warehouse.api.tdshop.io
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,24 @@
+meta {
+  name: get cj supplier price
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{product-query}}/pricing/cjprices?purchaseType=WAREHOUSE&shipToCode=WH001&searchCriteria=20024218&page=0&size=20&productType=INVENTORY
+  body: none
+  auth: bearer
+}
+
+query {
+  purchaseType: WAREHOUSE
+  shipToCode: WH001
+  searchCriteria: 20024218
+  page: 0
+  size: 20
+  productType: INVENTORY
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,24 @@
+meta {
+  name: get group import store suppliers
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{supplier-api}}/group-supplier-stores/a6905052-2243-4114-8650-e4df9d234600/store-suppliers?page=0&size=100&supplierExist=false&supplierExist=true
+  body: none
+  auth: bearer
+}
+
+query {
+  page: 0
+  size: 100
+  supplierExist: false
+  supplierExist: true
+  ~region: R0400
+  ~state: S0500
+}
+
+auth:bearer {
+  token: {{token}}
+}

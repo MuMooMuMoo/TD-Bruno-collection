@@ -1,0 +1,21 @@
+meta {
+  name: --billing-api---refund-request-generate-void_bill
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{billing-api}}/refund-request/generate/void_bill
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+   "receiptNo":"QA22-TH000095-01072022-113826"
+  }
+}

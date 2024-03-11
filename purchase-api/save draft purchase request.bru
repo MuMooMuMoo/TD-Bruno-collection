@@ -1,0 +1,124 @@
+meta {
+  name: save draft purchase request
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{purchase-api}}/purchase-requests
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+      "id": "5d6cf5c4b6047a0001451e14",
+      "version": 22,
+      "docNo": null,
+      "docDate": null,
+      "type": "Z9_EDIT",
+      "status": "DRAFT",
+      "orderSchedule": 1,
+      "advance": false,
+      "comment": null,
+      "subTotalAmount": 5537,
+      "vatAmount": 387.59,
+      "totalAmount": 5924.59,
+      "items": [
+          {
+              "itemNo": 1,
+              "articleNo": "20019604",
+              "barcode": "18850006801205",
+              "productName": "คอลเกตยาสีฟันกล่องแดงริ้วใสสดชื่น140g",
+              "orderUnit": "KAR",
+              "minimumOrder": 45.0,
+              "quantity": 1.0,
+              "unitPrice": 2135,
+              "vatPct": 7.0,
+              "vatAmountPerUnit": 149.45,
+              "vatAmount": 298.90,
+              "subTotalAmount": null,
+              "totalAmount": null,
+              "supplierCode": "100031",
+              "supplierName": "บริษัท คอลเกต-ปาล์มโอลีฟ",
+              "segmentCode": "10001",
+              "familyCode": null,
+              "classCode": null,
+              "subClassCode": null,
+              "status": null,
+              "deliveryDetail": {
+                  "requestDeliveryDate": null,
+                  "deliveryNote": "test delivery detail",
+                  "shipTo": {
+                      "id": "CONTACT001",
+                      "name": "คลังสินค้า บริษัท ทีดี ตะวันแดง จำกัด",
+                      "address": "ที่อยู่คลังสินค้า",
+                      "type": null,
+                      "contactPersonName": null,
+                      "contactPersonNumber": null
+                  },
+                  "billTo": {
+                      "id": "CONTACT003",
+                      "name": "บริษัท ทีดี ตะวันแดง จำกัด",
+                      "address": "393 อาคาร 393 ถนนสีลม แขวงสีลม เขตบางรัก กรุงเทพมหานคร 10500",
+                      "type": null,
+                      "contactPersonName": null,
+                      "contactPersonNumber": null
+                  }
+              },
+              "freeItems": [
+                  {
+                      "refArticleNo": "20019604",
+                      "articleNo": "22222",
+                      "barcode": "222222",
+                      "productName": "Free jing jing",
+                      "orderUnit": "KAR",
+                      "quantity": 1.0,
+                      "supplierName": "Test supplier name",
+                      "supplierCode": "10120101"
+                  }
+              ]
+          },
+          {
+              "itemNo": 2,
+              "articleNo": "20021705",
+              "barcode": "18850006343620",
+              "productName": "คอลเกตยาสีฟันซอล์ทดับเบิ้ลคลีนx2",
+              "orderUnit": "KAR",
+              "minimumOrder": 10.0,
+              "quantity": 1.0,
+              "unitPrice": 3402,
+              "vatPct": 7.0,
+              "vatAmountPerUnit": 238.14,
+              "vatAmount": 238.14,
+              "subTotalAmount": null,
+              "totalAmount": null,
+              "supplierCode": "100031",
+              "supplierName": "บริษัท คอลเกต-ปาล์มโอลีฟ",
+              "segmentCode": null,
+              "familyCode": null,
+              "classCode": null,
+              "subClassCode": null,
+              "status": null,
+              "deliveryDetail": null,
+              "freeItems": []
+          }
+      ],
+      "articleType": null,
+      "requester": "d7f0f0f7-4d8a-43f1-ab6d-e98fec65b827",
+      "requesterName": "admin001 admin001",
+      "requestedDate": "2019-09-23T04:40:09.164Z",
+      "lastModifiedBy": "d7f0f0f7-4d8a-43f1-ab6d-e98fec65b827",
+      "lastModifiedByName": "admin001 admin001",
+      "lastModifiedDate": "2019-09-23T04:40:09.191Z",
+      "auditLogs": []
+  }
+}

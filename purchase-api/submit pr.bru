@@ -1,0 +1,59 @@
+meta {
+  name: submit pr
+  type: http
+  seq: 21
+}
+
+post {
+  url: {{purchase-api}}/purchase-requests/submit
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+      "id": "",
+      "supplierCode": "230000040",
+      "supplierName": "อิเมจจิ้น ขอนแก่น ปริ้นส์ 456",
+      "requestType": "EDIT",
+      "movEdit":true,
+      "discountEdit":true,
+      "scheduleEdit":true,
+      "purchaseConditionReqMOV": [
+          {
+              "id": "60c6d1cba27e36000169b084",
+              "purchaseAmountExVat": 999999999.99,
+              "wmsCode": "TDNE-01",
+              "wmsCodeName": "TDNE-01-คลังขอนแก่น",
+              "rowId": 1
+          }
+      ],
+      "scheduleType": "WEEKLY_MANUAL",
+      "refScheduleImportId": "1fc75e00-614d-4114-b624-3867501aa448",
+      "refDiscountImportId": "9090e2e6-35e8-4aed-b257-5b1b3893901d",
+      "manualPurchaseConditionRequestWeeklyScheduleDto": null,
+      "supplierContacts": [
+          {
+              "name": "Test 456",
+              "phoneNo": "02 123 4567 ext. 203",
+              "remark": "ติดต่อเบอร์ภายในแผนก "
+          }
+      ],
+      "supplierDistributionCenters": [
+          {
+              "name": "ศูนย์กระจายสินค้า นานาชาติ",
+              "address": "123/456 อารายะ ประเทศ",
+              "remark": null
+          }
+      ]
+  
+  }
+}

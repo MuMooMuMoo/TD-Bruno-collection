@@ -1,0 +1,16 @@
+meta {
+  name: get cj barcode by article no and barcode
+  type: http
+  seq: 28
+}
+
+get {
+  url: {{product-api}}/cjbarcodes?articleNo=20013011&barcode=IC-000020
+  body: none
+  auth: none
+}
+
+query {
+  articleNo: 20013011
+  barcode: IC-000020
+}

@@ -1,0 +1,25 @@
+meta {
+  name: get product catalog by criteria
+  type: http
+  seq: 30
+}
+
+get {
+  url: {{product-api}}/tdproducts/catalog?offset=0&limit=100
+  body: none
+  auth: bearer
+}
+
+query {
+  offset: 0
+  limit: 100
+  ~searchCriteria: 88538470245
+}
+
+headers {
+  x-host: product.api.tdshop.io
+}
+
+auth:bearer {
+  token: {{token}}
+}

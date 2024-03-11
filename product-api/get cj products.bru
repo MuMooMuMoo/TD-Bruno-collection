@@ -1,0 +1,30 @@
+meta {
+  name: get cj products
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{product-api}}/cjproducts?page=0&size=20&sortOrder=desc&sortBy=lastModifiedDate
+  body: none
+  auth: bearer
+}
+
+query {
+  page: 0
+  size: 20
+  sortOrder: desc
+  sortBy: lastModifiedDate
+  ~beginImportDate: 2020-02-23T17%3A00%3A00.000Z
+  ~endImportDate: 2020-02-25T16%3A59%3A59.999Z
+  ~type[]: CJ
+  ~selectStatus: N
+}
+
+headers {
+  x-host: product.api.tdshop.io
+}
+
+auth:bearer {
+  token: {{token}}
+}

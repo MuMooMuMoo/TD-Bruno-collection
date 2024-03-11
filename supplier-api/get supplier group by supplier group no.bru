@@ -1,0 +1,19 @@
+meta {
+  name: get supplier group by supplier group no
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{supplier-api}}/supplier-groups/000001
+  body: none
+  auth: bearer
+}
+
+headers {
+  x-host: supplier.api.tdshop.io
+}
+
+auth:bearer {
+  token: {{token}}
+}

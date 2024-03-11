@@ -1,0 +1,15 @@
+meta {
+  name: get gr from id
+  type: http
+  seq: 15
+}
+
+get {
+  url: {{purchase-api}}/goods-receives/view/5efab085255ae20be9f633a8
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

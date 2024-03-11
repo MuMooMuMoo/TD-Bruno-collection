@@ -1,0 +1,25 @@
+meta {
+  name: get image signed url
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{order-api}}/crs/imageSignedUrl
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+  	"refId" : "/order_resources/claim_requests/claim_0_2019-07-05T10:27:32.21.jpg"	
+  }
+}

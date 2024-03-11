@@ -1,0 +1,19 @@
+meta {
+  name: get cj supplier promotion by criteria
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{product-query}}/cjsupplier/promotions?barcode=8851495012724
+  body: none
+  auth: bearer
+}
+
+query {
+  barcode: 8851495012724
+}
+
+auth:bearer {
+  token: {{token}}
+}

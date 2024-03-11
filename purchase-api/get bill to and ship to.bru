@@ -1,0 +1,15 @@
+meta {
+  name: get bill to and ship to
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{purchase-api}}/purchase-requests/contacts
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

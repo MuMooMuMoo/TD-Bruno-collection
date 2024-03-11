@@ -1,0 +1,23 @@
+meta {
+  name: import new store supplier
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{supplier-api}}/supplier-group-requests/import
+  body: multipartForm
+  auth: bearer
+}
+
+headers {
+  x-host: supplier.api.tdshop.io
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:multipart-form {
+  file: undefined
+}

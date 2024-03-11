@@ -1,0 +1,15 @@
+meta {
+  name: get purchase request by criteria
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{purchase-api}}/purchase-requests
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

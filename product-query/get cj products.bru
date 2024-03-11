@@ -1,0 +1,19 @@
+meta {
+  name: get cj products
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{product-query}}/cjproducts?searchCriteria=ซอง&beginImportDate=01/03/2019&endImportDate=10/03/2019
+  body: none
+  auth: none
+}
+
+query {
+  searchCriteria: ซอง
+  beginImportDate: 01/03/2019
+  endImportDate: 10/03/2019
+  ~type: N
+  ~type: D
+}

@@ -1,0 +1,19 @@
+meta {
+  name: get default delivery detail
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{purchase-api}}/purchase-requests/deliveryDetail/default?purchaseType=Z9
+  body: none
+  auth: bearer
+}
+
+query {
+  purchaseType: Z9
+}
+
+auth:bearer {
+  token: {{token}}
+}

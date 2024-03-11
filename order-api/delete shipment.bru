@@ -1,0 +1,15 @@
+meta {
+  name: delete shipment
+  type: http
+  seq: 16
+}
+
+delete {
+  url: {{order-api}}/shipments/SM20-000140
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

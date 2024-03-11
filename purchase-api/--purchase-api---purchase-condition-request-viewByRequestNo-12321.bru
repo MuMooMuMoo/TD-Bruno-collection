@@ -1,0 +1,15 @@
+meta {
+  name: --purchase-api---purchase-condition-request-viewByRequestNo-12321
+  type: http
+  seq: 25
+}
+
+get {
+  url: {{purchase-api}}/purchase-condition-request/viewByRequestNo/12321
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

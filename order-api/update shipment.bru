@@ -1,0 +1,29 @@
+meta {
+  name: update shipment
+  type: http
+  seq: 13
+}
+
+put {
+  url: {{order-api}}/shipments
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "id": "5e8afc591c8ea23a5191d525",
+    "version": 2,
+    "courierCode": "250000001",
+    "courierName": " บริษัทอีซี่โฮม บาย ดับบลิวแอลดี อินเตอร์มาร์เก็ตติ้ง แอนด์ เซอร์วิสเซส จำกัด",
+    "shipCharge": 200,
+    "plateNo": "กข-99999",
+    "driverName": "คนขับรถ เปลี่ยน",
+    "deliveryDate": "2020-04-30T00:00:00",
+    "pickupDate": "2020-04-30T00:00:00"
+  }
+}

@@ -1,0 +1,27 @@
+meta {
+  name: approve order request
+  type: http
+  seq: 8
+}
+
+put {
+  url: {{order-api}}/orders-requests/approveRequest
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+  	"requestNo": "OR20-000498",
+  	"status": "APPROVED",
+  	"comment": "Test Split Order"
+  }
+}

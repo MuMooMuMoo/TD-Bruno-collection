@@ -1,0 +1,21 @@
+meta {
+  name: get supplier promotion
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{purchase-api}}/purchase-requests/supplier/promotions?purchaseType=Z9&barcode=98850024105664
+  body: none
+  auth: bearer
+}
+
+query {
+  purchaseType: Z9
+  barcode: 98850024105664
+  ~searchCriteria: ตะกร้า
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,19 @@
+meta {
+  name: import picked delivery order
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{warehouse-command}}/delivery-orders/import-picked
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:multipart-form {
+  file: undefined
+}

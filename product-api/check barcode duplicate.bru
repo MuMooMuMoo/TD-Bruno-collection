@@ -1,0 +1,15 @@
+meta {
+  name: check barcode duplicate
+  type: http
+  seq: 14
+}
+
+get {
+  url: {{product-api}}/barcodes/exists/8856146019633
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

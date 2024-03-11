@@ -1,0 +1,34 @@
+meta {
+  name: create mongodb connector
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8083/connectors/
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+   "name" : "mongodb-outbox-event",
+   "config": {
+    "connector.class" : "io.debezium.connector.mongodb.MongoDbConnector",
+    "tasks.mask": "1",
+    "initial.sync.max.threads" : "1",
+    "mongodb.hosts": "rs0/192.168.138.142:30001,192.168.138.142:30002,192.168.138.142:30003",
+    "mongodb.name": "mongo1",
+    "offset.flush.interval.ms": "3000",
+    "database.whitelist": "identity,product,store,warehouse,order,purchase,suppplier,billing,wms",
+    "collection.whitelist": "identity[.]outbox_events,product[.]outbox_events,store[.]outbox_events,warehouse[.]outbox_events,order[.]outbox_events,purchase[.]outbox_events,suppplier[.]outbox_events,billing[.]outbox_events,wms[.]outbox_events,salesforce[.]outbox_events",
+    "transforms": "router",
+    "transforms.router.type": "io.tdshop.connector.outbox.routing.EventRouter",
+    "tombstones.on.delete": false
+   }
+  }
+}

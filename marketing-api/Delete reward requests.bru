@@ -1,0 +1,15 @@
+meta {
+  name: Delete reward requests
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{marketing-api}}/reward-requests/6048345b15eb560001ca92b1
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

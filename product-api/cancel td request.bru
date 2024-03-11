@@ -1,0 +1,26 @@
+meta {
+  name: cancel td request
+  type: http
+  seq: 31
+}
+
+post {
+  url: {{product-api}}/tdproducts/requests/reject
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+  	"id":"5f6852b57428c70001bd5abd",
+  	"comment":"test reject"
+  }
+}

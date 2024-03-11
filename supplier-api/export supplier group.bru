@@ -1,0 +1,19 @@
+meta {
+  name: export supplier group
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{supplier-api}}/supplier-groups/000008/export
+  body: none
+  auth: bearer
+}
+
+headers {
+  x-host: supplier.api.tdshop.io
+}
+
+auth:bearer {
+  token: {{token}}
+}

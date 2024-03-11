@@ -1,0 +1,15 @@
+meta {
+  name: query store elasticsearch
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{store-query}}/elasticStores
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

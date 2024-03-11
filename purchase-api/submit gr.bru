@@ -1,0 +1,153 @@
+meta {
+  name: submit gr
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{purchase-api}}/goods-receives
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "id": null,
+    "docNo": null,
+    "poNo": "PO19-000478",
+    "supplierName": "บริษัท ตะวันแดง โลจิสติกส์ จำกัด",
+    "type": "SUPPLIER",
+    "receiver": "admin001 td",
+    "createdDate": "2019-09-30T04:26:10.18Z",
+    "status": "DRAFT",
+    "orderSchedule": null,
+    "articleType": "M",
+    "doNo": "123456",
+    "invoiceNo": "987654",
+    "items": [
+      {
+        "itemNo": 1,
+        "productName": "Supplier-Merchandise Food Product",
+        "articleNo": "QA99-190908191856",
+        "barcode": "6379294477199",
+        "orderUnit": "PC",
+        "unitPrice": 100,
+        "orderQuantity": 1,
+        "remainingQuantity": 1,
+        "vatPct": 7,
+        "vatAmount": 7,
+        "receiveQuantity": 1,
+        "vatTotalAmount": 7,
+        "receiveAmount": 100,
+        "freeItems": [
+          {
+            "refArticleNo": "QA99-190908191856",
+            "productName": "TD-Merchandise Non-Food Product",
+            "articleNo": "QA99-190904084948",
+            "barcode": "4219000278584",
+            "orderUnit": "PC",
+            "orderQuantity": 2,
+            "remainingQuantity": 2,
+            "receiveQuantity": 2
+          },
+          {
+            "refArticleNo": "QA99-190908191856",
+            "productName": "TD-Merchandise Non-Food Product",
+            "articleNo": "QA99-190906103107",
+            "barcode": "1286765246787",
+            "orderUnit": "PC",
+            "orderQuantity": 2,
+            "remainingQuantity": 2,
+            "receiveQuantity": 2
+          }
+        ]
+      },
+      {
+        "itemNo": 2,
+        "productName": "Supplier-Merchandise Food Product",
+        "articleNo": "QA99-190909202215",
+        "barcode": "5673715946640",
+        "orderUnit": "PC",
+        "unitPrice": 100,
+        "orderQuantity": 1,
+        "remainingQuantity": 1,
+        "vatPct": 7,
+        "vatAmount": 7,
+        "receiveQuantity": 1,
+        "vatTotalAmount": 7,
+        "receiveAmount": 100,
+        "freeItems": [
+          {
+            "refArticleNo": "QA99-190909202215",
+            "productName": "Supplier-Merchandise Non-Food Product",
+            "articleNo": "QA99-190906103906",
+            "barcode": "2025207209601",
+            "orderUnit": "PC",
+            "orderQuantity": 2,
+            "remainingQuantity": 2,
+            "receiveQuantity": 2
+          }
+        ]
+      },
+      {
+        "itemNo": 3,
+        "productName": "Supplier-Merchandise Food Product",
+        "articleNo": "QA99-190908183006",
+        "barcode": "7708452927232",
+        "orderUnit": "PC",
+        "unitPrice": 100,
+        "orderQuantity": 1,
+        "remainingQuantity": 1,
+        "vatPct": 7,
+        "vatAmount": 7,
+        "receiveQuantity": 1,
+        "vatTotalAmount": 7,
+        "receiveAmount": 100,
+        "freeItems": [
+          {
+            "refArticleNo": "QA99-190908183006",
+            "productName": "Supplier-Merchandise Non-Food Product",
+            "articleNo": "QA99-190906224005",
+            "barcode": "6279027842194",
+            "orderUnit": "PC",
+            "orderQuantity": 3,
+            "remainingQuantity": 3,
+            "receiveQuantity": 3
+          },
+          {
+            "refArticleNo": "QA99-190908183006",
+            "productName": "Supplier-Merchandise Non-Food Product",
+            "articleNo": "QA99-190906201054",
+            "barcode": "9152024210374",
+            "orderUnit": "PC",
+            "orderQuantity": 3,
+            "remainingQuantity": 3,
+            "receiveQuantity": 3
+          },
+          {
+            "refArticleNo": "QA99-190908183006",
+            "productName": "TD-Merchandise Non-Food Product",
+            "articleNo": "QA99-190906103107",
+            "barcode": "1286765246787",
+            "orderUnit": "PC",
+            "orderQuantity": 3,
+            "remainingQuantity": 3,
+            "receiveQuantity": 3
+          }
+        ]
+      }
+    ],
+    "subTotalAmount": 300,
+    "vatAmount": 21,
+    "totalAmount": 321,
+    "auditLogs": []
+  }
+}

@@ -1,0 +1,198 @@
+meta {
+  name: update td product request
+  type: http
+  seq: 7
+}
+
+put {
+  url: {{product-api}}/tdproducts/requests
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+      "id": "5de482f666b40b0001b28d8b",
+      "version": 8,
+      "requestNo": null,
+      "articleNo": "123123131318",
+      "productName": "Test Article No 17",
+      "type": "NEW",
+      "requestedBy": "5d89b8fe6e21064964611c8f",
+      "requestedByName": "admin001 td",
+      "requestedDate": "2019-12-02T03:20:22.428Z",
+      "useCJProduct": false,
+      "articleType": "M",
+      "productType": "INVENTORY",
+      "status": "DRAFT",
+      "productDetail": {
+          "tdProduct": {
+              "id": null,
+              "version": 0,
+              "createdDate": "2019-12-02T03:20:22.629Z",
+              "createdBy": null,
+              "lastModifiedDate": "2019-12-02T08:09:46.646Z",
+              "lastModifiedBy": null,
+              "articleNo": "123123131318",
+              "useCJProduct": false,
+              "supplierRefNumber": null,
+              "productName": "Test Article No 17",
+              "productDisplayName": null,
+              "brand": null,
+              "productStatus": null,
+              "standardGp": null,
+              "productTier": null,
+              "productStandard": null,
+              "cbgProduct": null,
+              "exclusiveProduct": null,
+              "productGrading": null,
+              "productRecommend": false,
+              "productImages": [],
+              "shelfLife": null,
+              "minimumShelfLife": null,
+              "restrictedItem": null,
+              "restrictedAlcoholSaleTime": null,
+              "vat": null,
+              "estSalesQty": null,
+              "estSalesValue": null,
+              "sellingChannel": null,
+              "pickingUnitBarcode": null,
+              "segment": null,
+              "family": null,
+              "classCode": null,
+              "subClass": null,
+              "catalogLV1": null,
+              "catalogLV2": null,
+              "size": null,
+              "uom": null,
+              "flavor": null,
+              "gradingGroup": null,
+              "productLocationGuideline": null,
+              "articleType": "M",
+              "productType": "INVENTORY",
+              "allowToRent": false,
+              "rentalPerMonth": null,
+              "orderingMethods": [
+                  "FIRST_LOT_ORDER"
+              ],
+              "freshLiteCategory": {
+                  "id": null,
+                  "code": null,
+                  "name": null
+              },
+              "deliveryMethod": null,
+              "supplierGroup": {
+                  "supplierGroupId": null,
+                  "supplierGroupNo": null,
+                  "supplierGroupName": null
+              },
+              "maximumNormalPrice": null,
+              "maximumSpecialPrice": null,
+              "barcodes": [],
+              "allowToEdit": null
+          },
+          "cjProduct": {
+              "id": null,
+              "version": null,
+              "createdDate": null,
+              "createdBy": null,
+              "lastModifiedDate": null,
+              "lastModifiedBy": null,
+              "articleNo": null,
+              "productName": null,
+              "statusCJ": null,
+              "supplierCode": null,
+              "supplierName": null,
+              "brand": null,
+              "pickingUnit": null,
+              "shelfLife": null,
+              "minimumShelfLife": null,
+              "restrictedItem": null,
+              "vat": null,
+              "segmentCode": null,
+              "segmentName": null,
+              "familyCode": null,
+              "familyName": null,
+              "classCode": null,
+              "className": null,
+              "subClassCode": null,
+              "subClassName": null,
+              "type": null,
+              "selectStatus": null,
+              "barcodes": null
+          },
+          "supplierPrices": [
+              {
+                  "id": null,
+                  "supplierCode": "TH",
+                  "supplierName": "\"WFS-PG Cargo Co.",
+                  "branchNo": "00000",
+                  "supplierUnit": "PC",
+                  "supplierUnitFactor": 1,
+                  "supplierPrice": 120,
+                  "avgSupplierPrice": null,
+                  "effectiveDate": "2019-12-02T04:19:48Z",
+                  "expireDate": "2019-12-25T04:19:48Z",
+                  "warehouses": [
+                      {
+                          "id": "5dca26ad704d430bf69fc84c",
+                          "code": "WH003",
+                          "name": "คลังขอนแก่น"
+                      }
+                  ],
+                  "changes": null
+              }
+          ],
+          "normalPrice": {
+              "id": null,
+              "safetyStock": null,
+              "totalStock": null,
+              "movingAvgIncVat": null,
+              "vat": null,
+              "movingAvgExcVat": null
+          },
+          "specialPrice": {
+              "id": null,
+              "safetyStock": null,
+              "totalStock": null,
+              "movingAvgIncVat": null,
+              "vat": null,
+              "movingAvgExcVat": null
+          },
+          "effectiveWholesalePrice": {
+              "id": null,
+              "version": null,
+              "articleNo": "123123131317",
+              "priceIncVat": null,
+              "vat": null,
+              "priceExcVat": null,
+              "gpPct": null,
+              "effectiveDate": null,
+              "active": null
+          },
+          "scheduleWholesalePrice": {
+              "id": null,
+              "version": null,
+              "articleNo": null,
+              "priceIncVat": null,
+              "vat": null,
+              "priceExcVat": null,
+              "gpPct": null,
+              "effectiveDate": null,
+              "active": null
+          },
+          "barcodes": [],
+          "changeProducts": null
+      },
+      "allowToCopy": false,
+      "auditLogs": []
+  }
+}

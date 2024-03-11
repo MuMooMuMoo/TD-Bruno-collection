@@ -1,0 +1,15 @@
+meta {
+  name: get td product stack pricing by article no
+  type: http
+  seq: 24
+}
+
+get {
+  url: {{product-api}}/pricing/stackprices/20000060001
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

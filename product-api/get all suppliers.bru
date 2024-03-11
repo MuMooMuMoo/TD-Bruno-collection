@@ -1,0 +1,19 @@
+meta {
+  name: get all suppliers
+  type: http
+  seq: 23
+}
+
+get {
+  url: {{product-api}}/product-suppliers
+  body: text
+  auth: bearer
+}
+
+query {
+  ~searchCriteria: ยูนิ
+}
+
+auth:bearer {
+  token: {{token}}
+}

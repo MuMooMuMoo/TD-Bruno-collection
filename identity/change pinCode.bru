@@ -1,0 +1,24 @@
+meta {
+  name: change pinCode
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{user-api}}/users/tang.sa/forceChangePinCode
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+  Host: identity.api.tdshop.io
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {"newPinCode": "222222"}
+}

@@ -1,0 +1,19 @@
+meta {
+  name: export purchase request
+  type: http
+  seq: 17
+}
+
+get {
+  url: {{purchase-api}}/purchase-requests/export?status=REJECTED
+  body: none
+  auth: bearer
+}
+
+query {
+  status: REJECTED
+}
+
+auth:bearer {
+  token: {{token}}
+}

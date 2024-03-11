@@ -1,0 +1,15 @@
+meta {
+  name: get gr from criteria
+  type: http
+  seq: 19
+}
+
+get {
+  url: {{purchase-api}}/goods-receives
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

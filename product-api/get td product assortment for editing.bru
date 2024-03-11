@@ -1,0 +1,19 @@
+meta {
+  name: get td product assortment for editing
+  type: http
+  seq: 15
+}
+
+get {
+  url: {{product-api}}/tdproducts/20006848/details
+  body: none
+  auth: bearer
+}
+
+headers {
+  x-host: product.api.tdshop.io
+}
+
+auth:bearer {
+  token: {{token}}
+}

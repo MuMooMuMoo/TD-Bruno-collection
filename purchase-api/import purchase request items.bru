@@ -1,0 +1,28 @@
+meta {
+  name: import purchase request items
+  type: http
+  seq: 18
+}
+
+post {
+  url: {{purchase-api}}/purchase-requests/import?purchaseType=Z9&orderingCycle=2
+  body: multipartForm
+  auth: bearer
+}
+
+query {
+  purchaseType: Z9
+  orderingCycle: 2
+}
+
+headers {
+  x-host: purchase.api.tdshop.io
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:multipart-form {
+  file: undefined
+}

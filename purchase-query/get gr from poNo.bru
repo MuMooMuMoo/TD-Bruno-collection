@@ -1,0 +1,15 @@
+meta {
+  name: get gr from poNo
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{purchase-query}}/goods-receipts/PO19-000045
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: 
+}

@@ -1,0 +1,19 @@
+meta {
+  name: get cj product by article no
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{product-api}}/cjproducts/20007802
+  body: none
+  auth: bearer
+}
+
+headers {
+  x-host: product.api.tdshop.io
+}
+
+auth:bearer {
+  token: {{token}}
+}

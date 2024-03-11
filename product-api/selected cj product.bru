@@ -1,0 +1,29 @@
+meta {
+  name: selected cj product
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{product-api}}/cjproducts/select
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+  	"selectStatus": "SELECTED",
+  	"articleNos": [
+  		"30000001001"
+  	],
+  	"productType": "STORE_USE"
+  }
+}

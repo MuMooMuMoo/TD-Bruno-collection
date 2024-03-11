@@ -1,0 +1,20 @@
+meta {
+  name: get supplier group store supplier by criteria
+  type: http
+  seq: 10
+}
+
+get {
+  url: {{supplier-api}}/supplier-groups/5dba54f3673e05000159d4aa/store-suppliers?supplierExist=true&supplierExist=false
+  body: none
+  auth: bearer
+}
+
+query {
+  supplierExist: true
+  supplierExist: false
+}
+
+auth:bearer {
+  token: {{token}}
+}

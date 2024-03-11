@@ -1,0 +1,19 @@
+meta {
+  name: -users--username-
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{user-api}}/users/tang.sa
+  body: none
+  auth: bearer
+}
+
+headers {
+  Host: identity.api.tdshop.io
+}
+
+auth:bearer {
+  token: {{token}}
+}

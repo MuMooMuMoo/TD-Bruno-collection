@@ -1,0 +1,22 @@
+meta {
+  name: Approve reward request
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{marketing-api}}/reward-requests/approve
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+      "id": "60488138522d3b2aba7db39f",
+      "comment": "test approval"
+  }
+}

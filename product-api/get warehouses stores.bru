@@ -1,0 +1,23 @@
+meta {
+  name: get warehouses stores
+  type: http
+  seq: 34
+}
+
+get {
+  url: {{product-api}}/warehouses-stores?isWarehouse=true
+  body: none
+  auth: bearer
+}
+
+query {
+  isWarehouse: true
+}
+
+headers {
+  x-host: product.api.tdshop.io
+}
+
+auth:bearer {
+  token: {{token}}
+}

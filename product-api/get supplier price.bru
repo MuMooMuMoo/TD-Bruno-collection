@@ -1,0 +1,20 @@
+meta {
+  name: get supplier price
+  type: http
+  seq: 33
+}
+
+get {
+  url: {{product-api}}/supplier-price-configs/article-price-configs?deliveryMethod=SUPPLIER&articleNo=QA02DT201001094158
+  body: none
+  auth: bearer
+}
+
+query {
+  deliveryMethod: SUPPLIER
+  articleNo: QA02DT201001094158
+}
+
+auth:bearer {
+  token: {{token}}
+}

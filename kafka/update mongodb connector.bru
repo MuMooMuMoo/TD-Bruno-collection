@@ -1,0 +1,38 @@
+meta {
+  name: update mongodb connector
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://localhost:8080/api/kafka-connect-1/connectors/cdc-order-sink/config
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "connector.class": "com.mongodb.kafka.connect.MongoSinkConnector",
+      "topic.override.cdc.stock.stocks.collection": "stock_stocks",
+      "topics": "cdc.supplier.suppliers,cdc.supplier.group_store_suppliers,cdc.master.regions,cdc.master.warehouses,cdc.master.countries,cdc.master.units,cdc.master.states,cdc.merchant.merchants,cdc.store.stores,cdc.store.store_assortment_summaries,cdc.stock.stocks,cdc.product.shelf",
+      "topic.override.cdc.supplier.group_store_suppliers.collection": "supplier_group_store_suppliers",
+      "task.shutdown.graceful.timeout.ms": "180000",
+      "topic.override.cdc.master.units.collection": "master_units",
+      "topic.override.cdc.master.states.collection": "master_states",
+      "topic.override.cdc.merchant.merchants.collection": "merchant_merchants",
+      "topic.override.cdc.store.stores.collection": "store_stores",
+      "change.data.capture.handler": "com.mongodb.kafka.connect.sink.cdc.debezium.mongodb.MongoDbHandler",
+      "database": "order",
+      "document.id.strategy": "com.mongodb.kafka.connect.sink.processor.id.strategy.ProvidedInKeyStrategy",
+      "topic.override.cdc.supplier.suppliers.collection": "supplier_suppliers",
+      "connection.uri": "mongodb+srv://kafkamongo:monkey01@tdshop-teams.kt68u.gcp.mongodb.net/order?minPoolSize=0&maxPoolSize=10&maxIdleTimeMS=900000",
+      "post.processor.chain": "com.mongodb.kafka.connect.sink.processor.DocumentIdAdder",
+      "topic.override.cdc.master.countries.collection": "master_countries",
+      "topic.override.cdc.product.shelf.collection": "product_shelf",
+      "topic.override.cdc.store.store_assortment_summaries.collection": "store_store_assortment_summaries"
+  }
+}

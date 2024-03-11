@@ -1,0 +1,22 @@
+meta {
+  name: get claim request list
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{order-api}}/crs?requestedDateFrom=16/07/2019&requestedDateTo=17/07/2019&status=WAITING
+  body: none
+  auth: bearer
+}
+
+query {
+  requestedDateFrom: 16/07/2019
+  requestedDateTo: 17/07/2019
+  status: WAITING
+  ~searchCriteria: admin001
+}
+
+auth:bearer {
+  token: {{token}}
+}

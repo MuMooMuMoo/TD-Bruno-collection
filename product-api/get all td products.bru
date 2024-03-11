@@ -1,0 +1,24 @@
+meta {
+  name: get all td products
+  type: http
+  seq: 10
+}
+
+get {
+  url: {{product-api}}/tdproducts?resumeAt=2021-02-01T00:00:00Z&storeNo=000379
+  body: none
+  auth: bearer
+}
+
+query {
+  resumeAt: 2021-02-01T00:00:00Z
+  storeNo: 000379
+}
+
+headers {
+  x-host: product.api.tdshop.io
+}
+
+auth:bearer {
+  token: {{token}}
+}

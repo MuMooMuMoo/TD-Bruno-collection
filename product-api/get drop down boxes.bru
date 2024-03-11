@@ -1,0 +1,25 @@
+meta {
+  name: get drop down boxes
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{product-api}}/product-select-values?type[]=segment&type[]=family&type[]=classCode&type[]=subClass&type[]=catlv1&type[]=catlv2
+  body: none
+  auth: bearer
+}
+
+query {
+  type[]: segment
+  type[]: family
+  type[]: classCode
+  type[]: subClass
+  type[]: catlv1
+  type[]: catlv2
+  ~articleType: N
+}
+
+auth:bearer {
+  token: {{token}}
+}

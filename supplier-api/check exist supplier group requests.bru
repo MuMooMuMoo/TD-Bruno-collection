@@ -1,0 +1,15 @@
+meta {
+  name: check exist supplier group requests
+  type: http
+  seq: 13
+}
+
+get {
+  url: {{supplier-api}}/supplier-group-requests/000025/exists
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,26 @@
+meta {
+  name: manual close po
+  type: http
+  seq: 13
+}
+
+post {
+  url: {{purchase-api}}/purchase-orders/close
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+  	"id" : "PO19-000339",
+  	"comment" : "test closed"
+  }
+}

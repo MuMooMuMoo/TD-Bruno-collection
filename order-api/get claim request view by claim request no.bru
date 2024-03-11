@@ -1,0 +1,19 @@
+meta {
+  name: get claim request view by claim request no
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{order-api}}/crs/view/CR19-KKN0002-0067
+  body: none
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{token}}
+}

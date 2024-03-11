@@ -1,0 +1,19 @@
+meta {
+  name: get barcode list
+  type: http
+  seq: 29
+}
+
+get {
+  url: {{product-api}}/barcodes/list?barcode=8852758142448
+  body: none
+  auth: bearer
+}
+
+query {
+  barcode: 8852758142448
+}
+
+auth:bearer {
+  token: {{token}}
+}

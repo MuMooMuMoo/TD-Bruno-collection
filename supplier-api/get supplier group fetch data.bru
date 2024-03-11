@@ -1,0 +1,24 @@
+meta {
+  name: get supplier group fetch data
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{supplier-api}}/supplier-groups/fetchData?storeNo=000045&resumeAt=2019-05-17T00:00:00.000Z
+  body: none
+  auth: bearer
+}
+
+query {
+  storeNo: 000045
+  resumeAt: 2019-05-17T00:00:00.000Z
+}
+
+headers {
+  x-host: supplier.api.tdshop.io
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,21 @@
+meta {
+  name: delivery order list
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{order-api}}/delivery-orders?page=0&size=20
+  body: none
+  auth: bearer
+}
+
+query {
+  page: 0
+  size: 20
+  ~searchCriteria: DO20-TH000079-0014
+}
+
+auth:bearer {
+  token: {{token}}
+}

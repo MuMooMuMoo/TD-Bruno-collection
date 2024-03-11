@@ -1,0 +1,21 @@
+meta {
+  name: get supplier price by article no
+  type: http
+  seq: 11
+}
+
+post {
+  url: {{product-query}}/pricing/tdprices?productType=FIX_ASSET&shipToCode=WH001&searchCriteria=ไอที
+  body: json
+  auth: none
+}
+
+query {
+  productType: FIX_ASSET
+  shipToCode: WH001
+  searchCriteria: ไอที
+}
+
+body:json {
+  []
+}

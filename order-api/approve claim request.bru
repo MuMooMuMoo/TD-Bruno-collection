@@ -1,0 +1,48 @@
+meta {
+  name: approve claim request
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{order-api}}/crs/approve
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+   "claimRequestNo": "CR19-KKN0002-0067",
+   "items": [
+          {
+              "itemNo": 1,
+              "barcode": "8809367891397",
+              "articleNo": "20025115",
+              "reasons": [
+                  {
+             "claimReasonNo" : 1,
+             "approvedQty" : 1,
+             "approvedAmount" : 150.0,
+             "claimReason" : "แตกหัก,เสียหาย"   ,
+             "claimFrom": "SUPPLIER"
+            },
+         {
+             "claimReasonNo" : 2,
+             "approvedQty" : 1,
+             "approvedAmount" : 150.0,
+             "claimReason" : "ส่งสินค้าไม่ครบ",
+             "claimFrom": "SUPPLIER"
+         }
+              ]
+          }
+      ]
+  }
+}

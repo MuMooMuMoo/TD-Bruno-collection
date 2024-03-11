@@ -1,0 +1,65 @@
+meta {
+  name: submit gr
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{purchase-command}}/goods-receives
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+      "id": null,
+      "docNo": null,
+      "poNo": "PO19-000040",
+      "supplierCode": "100734",
+      "supplierName": "Test Supplier",
+      "receiver": "admin001 admin001",
+      "createdDate": "2019-09-18T08:44:58.993Z",
+      "status": "DRAFT",
+      "doNo": null,
+      "invoiceNo": null,
+      "items": [
+          {
+              "itemNo": 1,
+              "articleNo": "20000299",
+              "barcode": "24902806015848",
+              "productName": "เปาวินวอชไวโอเลต800g",
+              "orderUnit": "PAK",
+              "orderQuantity": 10.0,
+              "unitPrice": 417.28,
+              "remainingQuantity": 10.0,
+              "vatPct": 7.0,
+              "vatAmount": 0,
+              "receiveAmount": 417.28,
+              "receiveQuantity": 1, 
+              "freeItems": [
+                  {
+                      "refArticleNo": "20000299",
+                      "articleNo": "20000299",
+                      "barcode": "24902806015848",
+                      "productName": "เปาวินวอชไวโอเลต800g",
+                      "orderUnit": "PAK",
+                      "orderQuantity": 1.0,
+                      "remainingQuantity": 1.0,
+                      "receiveQuantity": 1
+                  }
+              ]
+          }
+      ],
+      "subTotalAmount": 0,
+      "vatAmount": 0,
+      "totalAmount": 0
+  }
+}

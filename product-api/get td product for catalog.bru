@@ -1,0 +1,30 @@
+meta {
+  name: get td product for catalog
+  type: http
+  seq: 12
+}
+
+get {
+  url: {{product-api}}/tdproducts?resumeAt=2019-04-01T00:00:00Z&storeNo=000082
+  body: none
+  auth: bearer
+}
+
+query {
+  resumeAt: 2019-04-01T00:00:00Z
+  storeNo: 000082
+  ~offset: 0
+  ~limit: 30
+  ~catalogLV1: CAT10006
+  ~catalogLV2: CAT20029
+  ~searchCriteria: 20013505
+  ~timeZone: Asia/Bangkok
+}
+
+headers {
+  x-host: product.api.tdshop.io
+}
+
+auth:bearer {
+  token: {{token}}
+}

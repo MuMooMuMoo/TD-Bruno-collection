@@ -1,0 +1,27 @@
+meta {
+  name: get purchasing price
+  type: http
+  seq: 22
+}
+
+get {
+  url: {{purchase-api}}/purchase-product-prices?purchaseType=WAREHOUSE&shipToCode=WH001&page=0&size=20&productType=INVENTORY
+  body: none
+  auth: bearer
+}
+
+query {
+  purchaseType: WAREHOUSE
+  shipToCode: WH001
+  page: 0
+  size: 20
+  productType: INVENTORY
+}
+
+headers {
+  x-host: purchase.api.tdshop.io
+}
+
+auth:bearer {
+  token: {{token}}
+}

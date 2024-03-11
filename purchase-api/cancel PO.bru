@@ -1,0 +1,26 @@
+meta {
+  name: cancel PO
+  type: http
+  seq: 11
+}
+
+post {
+  url: {{purchase-api}}/purchase-orders/cancel
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+  	"id" : "PO19-000053",
+  	"comment" : "test cancelled"
+  }
+}

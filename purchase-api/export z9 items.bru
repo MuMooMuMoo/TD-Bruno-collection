@@ -1,0 +1,20 @@
+meta {
+  name: export z9 items
+  type: http
+  seq: 16
+}
+
+get {
+  url: {{purchase-api}}/purchase-product-prices/export?purchaseType=Z9&orderingCycle=1
+  body: none
+  auth: bearer
+}
+
+query {
+  purchaseType: Z9
+  orderingCycle: 1
+}
+
+auth:bearer {
+  token: {{token}}
+}

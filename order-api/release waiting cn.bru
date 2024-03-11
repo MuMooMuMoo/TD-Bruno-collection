@@ -1,0 +1,15 @@
+meta {
+  name: release waiting cn
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{order-api}}/crs/CR19-KKN0002-0067/release-cn
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

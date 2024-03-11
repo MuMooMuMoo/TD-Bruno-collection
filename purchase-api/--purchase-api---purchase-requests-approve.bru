@@ -1,0 +1,26 @@
+meta {
+  name: --purchase-api---purchase-requests-approve
+  type: http
+  seq: 29
+}
+
+post {
+  url: {{purchase-api}}/purchase-requests/approve
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+      "id": "61022498ca426e00011b94c4",
+      "approvedPrItem": [],
+      "comment": "hi",
+      "subTotalAmount": 68.5,
+      "vatAmount": 4.8,
+      "totalAmount": 73.3
+  }
+}

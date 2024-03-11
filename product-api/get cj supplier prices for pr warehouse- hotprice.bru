@@ -1,0 +1,15 @@
+meta {
+  name: get cj supplier prices for pr warehouse- hotprice
+  type: http
+  seq: 26
+}
+
+get {
+  url: {{product-api}}/pricing/cjprices
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

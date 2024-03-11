@@ -1,0 +1,15 @@
+meta {
+  name: Update Reward Request
+  type: http
+  seq: 1
+}
+
+put {
+  url: {{marketing-api}}/reward-requests
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

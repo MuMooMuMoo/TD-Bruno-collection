@@ -1,0 +1,19 @@
+meta {
+  name: get delivery order items
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{warehouse-query}}/delivery-orders/items?requestedDeliveryDateFrom=01/07/2019&requestedDeliveryDateTo=31/07/2019&pickDateFrom=01/07/2019&pickDateTo=31/07/2019&status=PICKING
+  body: none
+  auth: none
+}
+
+query {
+  requestedDeliveryDateFrom: 01/07/2019
+  requestedDeliveryDateTo: 31/07/2019
+  pickDateFrom: 01/07/2019
+  pickDateTo: 31/07/2019
+  status: PICKING
+}

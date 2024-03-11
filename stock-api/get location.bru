@@ -1,0 +1,25 @@
+meta {
+  name: get location
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{stock-api}}/locations?locationType=WAREHOUSE&locationType=STORE&warehouseCode=WH001
+  body: none
+  auth: bearer
+}
+
+query {
+  locationType: WAREHOUSE
+  locationType: STORE
+  warehouseCode: WH001
+}
+
+headers {
+  x-host: stock.api.tdshop.io
+}
+
+auth:bearer {
+  token: {{token}}
+}

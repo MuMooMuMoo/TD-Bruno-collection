@@ -1,0 +1,15 @@
+meta {
+  name: get supplier stores
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{supplier-api}}/supplier-stores
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

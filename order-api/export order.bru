@@ -1,0 +1,23 @@
+meta {
+  name: export order
+  type: http
+  seq: 14
+}
+
+get {
+  url: {{order-api}}/orders/export?timezone=%2B07%3A00&orderDateFrom=2020-04-02T17%3A00%3A00.000Z&orderDateTo=2020-04-03T16%3A59%3A59.999Z&orderStatus=CANCELED_BY_SUPPLIER&orderType=STORE_REPLENISHMENT
+  body: none
+  auth: bearer
+}
+
+query {
+  timezone: %2B07%3A00
+  orderDateFrom: 2020-04-02T17%3A00%3A00.000Z
+  orderDateTo: 2020-04-03T16%3A59%3A59.999Z
+  orderStatus: CANCELED_BY_SUPPLIER
+  orderType: STORE_REPLENISHMENT
+}
+
+auth:bearer {
+  token: {{token}}
+}

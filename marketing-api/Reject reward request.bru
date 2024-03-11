@@ -1,0 +1,22 @@
+meta {
+  name: Reject reward request
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{marketing-api}}/reward-requests/reject
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+      "id": "60488138522d3b2aba7db39f",
+      "comment": "test reject"
+  }
+}

@@ -1,0 +1,22 @@
+meta {
+  name: get td product assortment
+  type: http
+  seq: 13
+}
+
+get {
+  url: {{product-api}}/tdproducts/assortment?page=0&size=20&lastUpdatedDateFrom=2020-02-20T17%3A00%3A00.000Z&lastUpdatedDateTo=2020-02-29T16%3A59%3A59.999Z
+  body: none
+  auth: bearer
+}
+
+query {
+  page: 0
+  size: 20
+  lastUpdatedDateFrom: 2020-02-20T17%3A00%3A00.000Z
+  lastUpdatedDateTo: 2020-02-29T16%3A59%3A59.999Z
+}
+
+auth:bearer {
+  token: {{token}}
+}

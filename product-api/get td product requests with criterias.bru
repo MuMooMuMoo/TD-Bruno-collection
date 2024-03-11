@@ -1,0 +1,34 @@
+meta {
+  name: get td product requests with criterias
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{product-api}}/tdproducts/requests?page=0&size=20&sortOrder=desc&sortBy=lastModifiedDate&beginRequestDate=2020-02-24T17%3A00%3A00.000Z&endRequestDate=2020-02-25T16%3A59%3A59.999Z
+  body: none
+  auth: bearer
+}
+
+query {
+  page: 0
+  size: 20
+  sortOrder: desc
+  sortBy: lastModifiedDate
+  beginRequestDate: 2020-02-24T17%3A00%3A00.000Z
+  endRequestDate: 2020-02-25T16%3A59%3A59.999Z
+  ~beginRequestDate: 01/03/2019
+  ~endRequestDate: 10/03/2019
+  ~requestType[]: N
+  ~requestType[]: D
+  ~requestStatus: D
+  ~sortBy: RequestedDate
+}
+
+headers {
+  x-host: product.api.tdshop.io
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,344 @@
+meta {
+  name: submit td product request
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{product-api}}/tdproducts/requests/submit
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+      "id": "5f4f100ee67eb3000198b3c3",
+      "version": 2,
+      "requestNo": null,
+      "articleNo": "20000023004",
+      "productName": "มาร์ลโบโรแดงซองแข็ง",
+      "type": "NEW",
+      "requestedBy": "000000",
+      "requestedByName": "Admin Td",
+      "requestedDate": "2020-09-09T16:27:57.597",
+      "useCJProduct": true,
+      "articleType": "M",
+      "productType": "INVENTORY",
+      "status": "DRAFT",
+      "productDetail": {
+          "tdProduct": {
+              "id": "5ed4f6a915c7080001d0c51a",
+              "version": 35,
+              "createdDate": "2020-06-01T19:37:59.416",
+              "createdBy": "System",
+              "lastModifiedDate": "2020-09-09T16:27:57.599",
+              "lastModifiedBy": "000586",
+              "articleNo": "20000023004",
+              "supplierArticleNo": "20000023004",
+              "useCJProduct": true,
+              "supplierRefNumber": null,
+              "productName": "มาร์ลโบโรแดงซองแข็ง",
+              "supplierProductName": "มาร์ลโบโรแดงซองแข็ง",
+              "productDisplayName": "มาร์ลโบโรแดงซองแข็ง",
+              "brand": "มาร์ลโบโร",
+              "productStatus": null,
+              "previousProductStatus": null,
+              "standardGp": 1.0,
+              "productTier": "Core",
+              "productStandard": "TISI",
+              "cbgProduct": "Other",
+              "exclusiveProduct": true,
+              "productGrading": "AA",
+              "productRecommend": false,
+              "productImages": [
+                  {
+                      "id": "5f589ef37b77b50001194abe",
+                      "original": "td_assortments/20200909092257561.jpg",
+                      "small": "td_assortments/thumb@200_20200909092257561.jpg",
+                      "medium": "td_assortments/thumb@450_20200909092257561.jpg",
+                      "fileName": "20200909092257561.jpg",
+                      "directory": "td_assortments"
+                  }
+              ],
+              "shelfLife": 365,
+              "minimumShelfLife": 305,
+              "restrictedItem": true,
+              "restrictedAlcoholSaleTime": false,
+              "vat": true,
+              "estSalesQty": null,
+              "estSalesValue": null,
+              "sellingChannel": "Cart",
+              "pickingUnitBarcode": "76164217",
+              "tdMovingAvg": null,
+              "segment": "SEG00001",
+              "family": "10000",
+              "classCode": "10100",
+              "subClass": "10102",
+              "catalogLV1": null,
+              "catalogLV2": null,
+              "size": null,
+              "uom": null,
+              "flavor": null,
+              "gradingGroup": "GRA00002",
+              "productLocationGuideline": "TEST",
+              "articleType": "M",
+              "productType": "INVENTORY",
+              "allowToRent": null,
+              "rentalPerMonth": null,
+              "orderingMethods": [
+                  "FIRST_LOT_ORDER",
+                  "SPECIAL_REQUEST",
+                  "STORE_REPLENISHMENT"
+              ],
+              "freshLiteCategory": {
+                  "id": null,
+                  "code": null,
+                  "name": null,
+                  "type": null
+              },
+              "deliveryMethod": "TD",
+              "supplierGroup": {
+                  "supplierGroupId": null,
+                  "supplierGroupNo": null,
+                  "supplierGroupName": null
+              },
+              "maximumNormalPrice": 125.25,
+              "maximumSpecialPrice": 0,
+              "barcodes": [],
+              "allowToEdit": null
+          },
+          "cjProduct": {
+              "id": "5ed4f6a915c7080001d0c51a",
+              "version": 34,
+              "createdDate": "2020-06-01T12:37:59.416",
+              "createdBy": "System",
+              "lastModifiedDate": "2020-07-24T07:16:13.982",
+              "lastModifiedBy": "System",
+              "articleNo": "20000023004",
+              "productName": "มาร์ลโบโรแดงซองแข็ง",
+              "statusCJ": "A",
+              "supplierCode": "101084",
+              "supplierName": "บริษัท ฟิลลิป มอร์ริส เทรดดิ้ง",
+              "brand": "มาร์ลโบโร",
+              "pickingUnit": "ST",
+              "shelfLife": 365,
+              "minimumShelfLife": 305,
+              "restrictedItem": true,
+              "vat": true,
+              "segmentCode": "SEG00001",
+              "segmentName": "Grocery Food",
+              "familyCode": "10000",
+              "familyName": "BCW",
+              "classCode": "10100",
+              "className": "Cigarettes",
+              "subClassCode": "10102",
+              "subClassName": "Import",
+              "type": null,
+              "selectStatus": "NEW",
+              "barcodes": null,
+              "cjSupplierPrices": null
+          },
+          "supplierPrices": [
+              {
+                  "id": "5ed4f6da15c7080001d11114",
+                  "supplierCode": "300000001",
+                  "supplierName": "บริษัทซี.เจ. เอ็กซ์เพรส กรุ๊ป จำกัด",
+                  "branchNo": "00000",
+                  "supplierUnit": "CAR",
+                  "orderBarcode": "5410706523539",
+                  "sourceSupplierUnit": "KAR",
+                  "supplierUnitFactor": 500,
+                  "supplierPrice": 62621.49,
+                  "avgSupplierPrice": null,
+                  "effectiveDate": "2019-01-03T00:00:00.000Z",
+                  "expireDate": "2199-12-31T23:59:59.999Z",
+                  "warehouses": null,
+                  "changes": null,
+                  "isDelete": null
+              }
+          ],
+          "effectiveWholesalePrice": {
+              "id": null,
+              "version": null,
+              "articleNo": "20000023004",
+              "priceIncVat": 123,
+              "vat": 8.046729,
+              "priceExcVat": 114.953271,
+              "gpPct": -8.220941,
+              "effectiveDate": null,
+              "active": null,
+              "changes": null
+          },
+          "scheduleWholesalePrice": null,
+          "barcodes": [
+              {
+                  "cjBarcode": {
+                      "id": "5ed4f5f715c7080001d005b4",
+                      "version": 44,
+                      "barcode": "76164217",
+                      "articleNo": "20000023004",
+                      "barSize": "S",
+                      "unit": "ST",
+                      "unitFactor": 1,
+                      "retailPrice": 145.0,
+                      "movingPrice": 124.52,
+                      "wholesalePrice": 124.52,
+                      "retailPriceEffectiveDate": null,
+                      "pickingUnit": null,
+                      "allowToOrder": false,
+                      "allowToBuy": false,
+                      "allowToSell": true
+                  },
+                  "tdBarcode": {
+                      "id": "5ed4f5f715c7080001d005b4",
+                      "version": 44,
+                      "createdDate": "2020-06-01T19:34:58.808",
+                      "createdBy": "System",
+                      "lastModifiedDate": "2020-07-24T18:13:01.497",
+                      "lastModifiedBy": "System",
+                      "articleNo": "20000023004",
+                      "barcode": "76164217",
+                      "barcodeStatus": null,
+                      "barSize": "S",
+                      "unit": "PC",
+                      "unitFactor": 1,
+                      "weight": 1.0,
+                      "height": 1.0,
+                      "width": 1.0,
+                      "length": 1.0,
+                      "suggestedRetailPrice": 145,
+                      "effectiveRetailPrice": {
+                          "id": null,
+                          "version": null,
+                          "articleNo": null,
+                          "barcode": null,
+                          "vatPct": null,
+                          "priceIncVat": 145,
+                          "vat": 9.485981,
+                          "priceExcVat": 135.514019,
+                          "effectiveDate": null,
+                          "estimatedPartnerGpPct": 15.17
+                      },
+                      "scheduleRetailPrice": null
+                  },
+                  "changeBarcodes": null
+              },
+              {
+                  "cjBarcode": {
+                      "id": "5ed4f5f715c7080001cfe251",
+                      "version": 44,
+                      "barcode": "7616400001573",
+                      "articleNo": "20000023004",
+                      "barSize": "M",
+                      "unit": "PAK",
+                      "unitFactor": 10,
+                      "retailPrice": 0.0,
+                      "movingPrice": 1245.2,
+                      "wholesalePrice": 1245.2,
+                      "retailPriceEffectiveDate": null,
+                      "pickingUnit": null,
+                      "allowToOrder": false,
+                      "allowToBuy": false,
+                      "allowToSell": true
+                  },
+                  "tdBarcode": {
+                      "id": "5ed4f5f715c7080001cfe251",
+                      "version": 44,
+                      "createdDate": "2020-06-01T19:34:58.795",
+                      "createdBy": "System",
+                      "lastModifiedDate": "2020-07-24T18:13:01.497",
+                      "lastModifiedBy": "System",
+                      "articleNo": "20000023004",
+                      "barcode": "7616400001573",
+                      "barcodeStatus": null,
+                      "barSize": "M",
+                      "unit": "PAC",
+                      "unitFactor": 10,
+                      "weight": 1.0,
+                      "height": 1.0,
+                      "width": 1.0,
+                      "length": 1.0,
+                      "suggestedRetailPrice": 1350.0,
+                      "effectiveRetailPrice": {
+                          "id": null,
+                          "version": null,
+                          "articleNo": null,
+                          "barcode": null,
+                          "vatPct": null,
+                          "priceIncVat": 1350.0,
+                          "vat": 88.317757,
+                          "priceExcVat": 1261.682243,
+                          "effectiveDate": null,
+                          "estimatedPartnerGpPct": 8.89
+                      },
+                      "scheduleRetailPrice": null
+                  },
+                  "changeBarcodes": null
+              },
+              {
+                  "cjBarcode": {
+                      "id": "5ed4f5f715c7080001cfd3b8",
+                      "version": 44,
+                      "barcode": "5410706523539",
+                      "articleNo": "20000023004",
+                      "barSize": "L",
+                      "unit": "KAR",
+                      "unitFactor": 500,
+                      "retailPrice": 0.0,
+                      "movingPrice": 62260.0,
+                      "wholesalePrice": 62260.0,
+                      "retailPriceEffectiveDate": null,
+                      "pickingUnit": null,
+                      "allowToOrder": false,
+                      "allowToBuy": false,
+                      "allowToSell": true
+                  },
+                  "tdBarcode": {
+                      "id": "5ed4f5f715c7080001cfd3b8",
+                      "version": 44,
+                      "createdDate": "2020-06-01T19:34:58.739",
+                      "createdBy": "System",
+                      "lastModifiedDate": "2020-07-24T18:13:01.497",
+                      "lastModifiedBy": "System",
+                      "articleNo": "20000023004",
+                      "barcode": "5410706523539",
+                      "barcodeStatus": null,
+                      "barSize": "L",
+                      "unit": "CAR",
+                      "unitFactor": 500,
+                      "weight": 1.0,
+                      "height": 1.0,
+                      "width": 1.0,
+                      "length": 1.0,
+                      "suggestedRetailPrice": 72500.0,
+                      "effectiveRetailPrice": {
+                          "id": null,
+                          "version": null,
+                          "articleNo": null,
+                          "barcode": null,
+                          "vatPct": null,
+                          "priceIncVat": 72500.0,
+                          "vat": 4742.990654,
+                          "priceExcVat": 67757.009346,
+                          "effectiveDate": null,
+                          "estimatedPartnerGpPct": 15.17
+                      },
+                      "scheduleRetailPrice": null
+                  },
+                  "changeBarcodes": null
+              }
+          ],
+          "changeProducts": null
+      },
+      "allowToCopy": false,
+      "auditLogs": []
+  }
+}

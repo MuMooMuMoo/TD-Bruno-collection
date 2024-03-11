@@ -1,0 +1,21 @@
+meta {
+  name: --billing-api---refund-request-generate-pre_order
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{billing-api}}/refund-request/generate/pre_order
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+   "receiptNo":"QA22-TH000095-30062022-111627"
+  }
+}
