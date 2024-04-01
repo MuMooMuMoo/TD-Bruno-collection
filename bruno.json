@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "name": "tdshop.io",
+  "name": "tdshop.io API collection",
   "type": "collection",
   "ignore": [
     "node_modules",
