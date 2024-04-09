@@ -1,0 +1,15 @@
+meta {
+  name: export excel
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{marketing-api}}/promotion-requests/V2/65e6e6f1b6da47414b31e06b/export
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
