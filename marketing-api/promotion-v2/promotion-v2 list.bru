@@ -5,7 +5,21 @@ meta {
 }
 
 get {
-  url: http://localhost:9881/promotions/V2/list
+  url: {{marketing-api}}/promotions/V2/list?status=CANCELLED&createdDateFrom=2024-06-20T17%3A00%3A00.000Z&createdDateTo=2024-06-21T17%3A00%3A00.000Z&validDateFrom=2027-01-17T17%3A00%3A00.000Z&validDateTo=2024-01-17T17%3A00%3A00.000Z&promotionType=SPECIAL_PRICE&promotionType=BUY_X_CHEAPER
   body: none
-  auth: none
+  auth: bearer
+}
+
+query {
+  status: CANCELLED
+  createdDateFrom: 2024-06-20T17%3A00%3A00.000Z
+  createdDateTo: 2024-06-21T17%3A00%3A00.000Z
+  validDateFrom: 2027-01-17T17%3A00%3A00.000Z
+  validDateTo: 2024-01-17T17%3A00%3A00.000Z
+  promotionType: SPECIAL_PRICE
+  promotionType: BUY_X_CHEAPER
+}
+
+auth:bearer {
+  token: {{token}}
 }
