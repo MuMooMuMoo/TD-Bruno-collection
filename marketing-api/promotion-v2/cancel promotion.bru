@@ -5,7 +5,18 @@ meta {
 }
 
 post {
-  url: /promotions/V2/cancel
-  body: none
-  auth: none
+  url: {{marketing-api}}/promotions/V2/cancel
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "id": "667e1ce2e30e1e6276534838",
+    "comment": "test cancel"
+  }
 }
