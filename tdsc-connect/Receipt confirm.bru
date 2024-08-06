@@ -1,0 +1,61 @@
+meta {
+  name: Receipt confirm
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{tdsc-connect}}/tc-connect/receipt/confirm
+  body: json
+  auth: basic
+}
+
+auth:basic {
+  username: tdsc
+  password: m293GBjzV@q7atDx
+}
+
+body:json {
+  {
+        "wmsCode": "D004", // mapping from warehouseId
+        "poNo": "TO24-100498", // mapping from orderNo
+        "purchaseType": "SUPPLIER",
+        "receivedDate": "2024-06-05 17:10:00", // mapping from receivedTime
+        "asnRefNo": "BuBu-234873", // mapping from userDefine1
+        "doNo": "DO23-12345646", // mapping from userDefine2
+        "docRefNo": "AA-123456789", // mapping from userDefine3
+        "type": "STOCK_TRANSFER", // mapping from orderType
+        "customerId": "",
+        "items": [
+          {
+            "referenceNo": "TO24-100498", // mapping from referenceNo
+            "itemNo": 1, // mapping from lineNo
+            "articleNo" : "4800000250", // mapping from sku
+            "barcode": "3100000000026",
+            "receivedQty": 1.0,
+            "mfgDate": "", // mapping from lotAtt01
+            "expDate": "", // mapping from lotAtt02
+            "recDate": "", // mapping from lotAtt03
+            "toteId": "TX202406041524", // mapping from lotAtt04
+            "supplierId": "423200264", // mapping from lotAtt05
+            "supplierName": "บริษัท เจริญทรัพย์ แมนูแฟคเจอริ่ง จำกัด", // mapping from lotAtt06
+            "stockCondition": "123456" // mapping from lotAtt08
+          },
+          
+          {
+            "referenceNo": "TO24-100498", // mapping from referenceNo
+            "itemNo": 2, // mapping from lineNo
+            "articleNo" : "4800000251", // mapping from sku
+            "barcode": "3100000000027",
+            "receivedQty": 1.0,
+            "mfgDate": "", // mapping from lotAtt01
+            "expDate": "", // mapping from lotAtt02
+            "recDate": "", // mapping from lotAtt03
+            "toteId": "TX01-K219999999", // mapping from lotAtt04
+            "supplierId": "423200264", // mapping from lotAtt05
+            "supplierName": "บริษัท เจริญทรัพย์ แมนูแฟคเจอริ่ง จำกัด", // mapping from lotAtt06
+            "stockCondition": "123456" // mapping from lotAtt08
+          }
+        ]
+  }
+}
